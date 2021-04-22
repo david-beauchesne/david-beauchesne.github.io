@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Hugo generated files
+public/
+resources/_gen/
+
+# Mac generated files
+.DS_Store
