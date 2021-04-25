@@ -1,0 +1,21 @@
+<ul class="fa-ul">
+  <!-- <li><span class="fa-li"><i class="fas fa-check-square"></i></span>List icons can</li> -->
+  {{ range .Site.Data.education.education }}
+    <li><span class="fa-li"><i class='fas fa-graduation-cap' aria-hidden="true"></i></span> <b> {{ .diplome_en }} </b>
+    <span style="float:right;">{{ .start }}-{{ .finish }}</span>
+    <br>
+    <a href="{{ .url }}"> <em> {{ .institution }} </em></a>
+    <span style="float:right;">{{ .where }}</span>
+
+    {{ if .thesis_en }}
+      <br>
+      <p style="width:75%;">
+        <b>Thesis: </b> {{ .thesis_en }}
+        <a href="{{ .pdf }}"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+      </p>
+    {{end}}
+
+    <br>
+
+  {{ end }}
+</ul>

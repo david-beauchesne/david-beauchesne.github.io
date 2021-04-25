@@ -93,7 +93,7 @@ url = "https://david-beauchesne.github.io/index.xml"
   name = "Vitae"
   identifier = "vitae"
   weight = 100
-  url = "/cv/"
+  url = "/vitae/"
 
   [[Languages.en.menu.main]]
   name = "Posts"
