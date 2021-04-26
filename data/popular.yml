@@ -1,0 +1,21 @@
+---
+popular:
+- id: carrier-belleau2020
+  type: article-journal
+  author:
+  - family: Carrier-Belleau
+    given: Charlotte
+  - family: Beauchesne
+    given: David
+  - family: Dreujou
+    given: Elliot
+  - family: Isabel
+    given: Laurie
+  issued:
+  - year: 2020
+  title: 'Le Saint-Laurent : comment évaluer l’empreinte humaine dans un système complexe ?'
+  container: L'interdisciplinaire
+  publisher: Institut Hydro-Québec en environnement, développement et société (Institut EDS), Université Laval
+  volume: "Numéro 18, Automne 2020"
+  URL: https://www.ihqeds.ulaval.ca/publications/linterdisciplinaire/linterdisplinaire/numero-18-automne-2020/news/le-saint-laurent-comment-evaluer-l-empreinte-humaine-dans-un-systeme-complexe/
+---
