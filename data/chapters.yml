@@ -1,0 +1,33 @@
+---
+chapters:
+- id: schloss2018
+  type: book-chapter
+  author:
+  - family: Schloss
+    given: Irene R
+  - family: Archambault
+    given: Philippe
+  - family: Beauchesne
+    given: David
+  - family: Bourgault
+    given: Daniel
+  - family: Cusson
+    given: Mathieu
+  - family: Dumond
+    given: Dany
+  - family: Ferreyra
+    given: Gustavo
+  - family: Levasseur
+    given: Maurice
+  - family: Pelletier
+    given: Émilien
+  - family: St-Louis
+    given: Richard
+  - family: Tremblay
+    given: Réjean
+  issued:
+  - year: 2018
+  title: 'Impacts potentiels cumulés des facteurs de stress liés aux activités humaines sur l’écosystème marin du Saint-Laurent'
+  container: "Réseau Notre Golfe"
+  URL: https://notregolfe.ca/#livre
+---
