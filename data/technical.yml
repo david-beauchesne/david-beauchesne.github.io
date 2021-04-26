@@ -1,0 +1,124 @@
+---
+technical:
+- id: mddelcc2017
+  type: technical-report
+  author:
+  - family: Lachance
+    given: Sarah-Claude
+  - family: Beauchesne
+    given: David
+  issued:
+  - year: 2017
+  title: 'Étude de planification systématique de la conservation à l’aide de
+  l’outil Marxan : Rapport final d’analyse d’une étude de cas sur le territoire
+  continental du Plan Nord (Québec)'
+  container: Ministère du Développement Durable et de la Lutte contre les Changements Climatiques
+  volume: 101p.
+  pdf: "mddelcc2017.pdf"
+
+- id: laminaire2015
+  type: technical-report
+  author:
+    - family: Grant
+      given: Cindy
+    - family: Monpert
+      given: Coralie
+    - family: Rondeau
+      given: Marie-Hélène
+    - family: Beauchesne
+      given: David
+    - family: Stoeffler
+      given: Camille
+  issued:
+    - year: 2015
+  title: "Cartographie de bancs de laminaires à l’aide de méthodes acoustiques"
+  volume: 46p.+v
+  pdf: "laminaire2015.pdf"
+
+- id: predateur2014
+  type: technical-report
+  author:
+    - family: Beauchesne
+      given: David
+    - family: Cadotte
+      given: M
+    - family: Dussault
+      given: Christian
+    - family: St-Laurent
+      given: Martin-Hugues
+  issued:
+    - year: 2014
+  title: "Revue de littérature critique sur le contrôle des prédateurs dans un contexte de conservation du caribou forestier au Québec"
+  container: "Rapport scientifique pour le Ministère de la Faune, des Forêts et des Parcs"
+  volume: 44p.+vii
+  pdf: "predateurs2014.pdf"
+
+- id: route2014
+  type: technical-report
+  author:
+    - family: St-Laurent
+      given: Martin-Hugues
+    - family: Beauchesne
+      given: David
+    - family: Dussault
+      given: Christian
+    - family: Lesmerises
+      given: Rémi
+  issued:
+    - year: 2014
+  title: "Évaluation des impacts des chemins forestiers sur l’écologie du caribou forestier au Québec"
+  container: "Rapport scientifique pour le Ministère de la Faune, des Forêts et des Parcs"
+  volume: 41p.+ii
+  pdf: "route2014.pdf"
+
+- id: idlm2014
+  type: technical-report
+  author:
+    - family: Beauchesne
+      given: David
+    - family: Faille
+      given: Geneviève
+    - family: Brêthes
+      given: Jean-Claude
+  issued:
+    - year: 2014
+  title: "Étude concernant une aire marine protégée aux îles de la Madeleine. Volume 1. Rapport d’étude et analyse écologique"
+  container: "Rapport préparé pour le MDDEFP et Parcs Canada"
+  volume: 81p.+Annexes
+  pdf: "idlm2014.pdf"
+
+- id: atlas2014
+  type: technical-report
+  author:
+    - family: Grant
+      given: Cindy
+    - family: Faille
+      given: Geneviève
+    - family: Beauchesne
+      given: David
+  issued:
+    - year: 2014
+  title: "Étude concernant une aire marine protégée aux îles de la Madeleine. Volume 3. Atlas cartographique des îles de la Madeleine"
+  container: "Rapport préparé pour le MDDEFP et Parcs Canada"
+  volume: xv+143p.
+  pdf: "atlas2014.pdf"
+
+- id: route2010
+  type: technical-report
+  author:
+    - family: Renaud
+      given: Limoilou-Amélie
+    - family: Leblond
+      given: Mathieu
+    - family: Beauchesne
+      given: David
+    - family: St-Laurent
+      given: Martin-Hugues
+  issued:
+    - year: 2010
+  title: "Synthèse des connaissances relatives aux impacts du réseau routier sur l’écologie du caribou forestier"
+  container: "Revue de littérature présenté à l'équipe provinciale pour le rétablissement du caribou forestier"
+  volume: 21p.
+  pdf: "route2010.pdf"
+
+---
