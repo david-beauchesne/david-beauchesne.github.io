@@ -1,0 +1,40 @@
+---
+projects:
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: 0001
+    name: "Assessment of the cumulative effects of global changes on ecosystems - The case of the estuary and Gulf of St. Lawrence"
+    shortname: "St. Lawrence System cumulative effects assessment"
+    description: 
+    thumbnail:
+    partners:
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: 0002
+    name: "eDrivers"
+    shortname: "eDrivers"
+    description:
+    thumbnail:
+    partners:
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: 0003
+    name:
+    shortname: "Cumulative effects assessment of navigation" # Effets cumulatifs de la navigation
+    description: ""
+    thumbnail:
+    partners:
+      - "Transports Canada"
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: 0004
+    name:
+    shortname: "Scotian Shelf Bioregion cumulative effects assessment"
+    description: ""
+    thumbnail:
+    partners:
+      - "Department of Fisheries and Oceans Canada"
+      - "Bedford Institute of Oceanography"
+
+---
