@@ -1,19 +1,57 @@
 ---
 notes:
 
+  # # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  # - id: ""
+  #   date: ""
+  #   tags:
+  #     - ""
+  #     - ""
+  #   projects:
+  #     - ""
+  #     - ""
+  #   highlights:
+  #     - ""
+  #     - ""
+  #   questions:
+  #     - ""
+  #     - ""
+  #   notes:
+  #     - ""
+  #     - ""
+
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
-  - id: "Fajardo-2021"
+  - id: "viglione2021"
+    date: "07-05-2021"
     tags:
-      - "tag1"
-      - "tag2"
-    projects:
-      - "id1"
-      - "id2"
+      - "climate change"
+      - "marine"
+      - "global"
+      - "temperature"
+      - "heatwave"
     highlights:
-      - "hg1"
-      - "hg2"
-    questions:
-      - "q1"
-      - "q2"
+      - "Marine heatwaves can have profound impacts on ecosystems"
+      - "The frequency of marine heatwaves is increasing with intensifying climate change"
+      - "Forecasting heatwave events is a complex process"
+      - "Map of heatwave hotspots from 2011 to 2020"
+      - "Provides examples of heatwaves and their effects"
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: "ghd2019"
+    date: "07-05-2021"
+    tags:
+      - "dredging"
+      - "St. Lawrence"
+    projects:
+      - "0001"
+      - "0002"
+      - "0003"
+    highlights:
+      - "Planned maintenance dredging activities in the St. Lawrence between 2019 and 2023 and their expected environmental effects between Montreal and Cap Gribane"
+      - "Maps with all the dredging and disposal sites, with coordinates for disposal sites"
+      - "The St. Lawrence navigation route is 340 km long, of which 210 km has been dredged for secure shipping. Some of that has to be done periodically because of local sedimentary dynamics"
+    notes:
+      - "The report provides a nice overview historic and future dredging activities in the St. Lawrence"
+      - "Coordinates of disposal sites are available in the appendices"
 
 ---
