@@ -54,4 +54,22 @@ notes:
       - "The report provides a nice overview historic and future dredging activities in the St. Lawrence"
       - "Coordinates of disposal sites are available in the appendices"
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: "pearlman2019"
+    date: "10-05-2021"
+    tags:
+      - "ocean observing"
+      - "best practice"
+      - "standards"
+      - "interoperability"
+    projects:
+      - "0002"
+    highlights:
+      - "The importance of best practices and standards"
+      - "Introduction of the Ocean Best Practices portal (oceanbestpractices.org), which provides access to best practices and standards"
+      - "We should foster "
+      - "Recommendations for ocean best practices are presented at the end"
+    notes:
+      - "I did not read through the whole article in details, but it would be relevant to do so in the context of continuing the development of eDrivers"
+
 ---
