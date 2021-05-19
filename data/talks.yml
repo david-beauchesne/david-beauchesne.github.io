@@ -2,6 +2,19 @@
 talk:
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - title:      "L'évaluation des effets cumulatifs dans un contexte de gestion écosystémique"
+    author:
+      - family: Beauchesne
+        given:  David
+    conference:
+      - name:   "Congrès de l'Association québécoise pour l'évaluation d'impacts (AQÉI). Impacts et effets cumulatifs : comment réponse aujourd'hui à ces impératifs?"
+        url:    "https://www.aqei.qc.ca/events?id=970"
+        date:   2021-05-26
+        where:  "Webinar"
+    github:     https://github.com/david-beauchesne/2021-05-26_Congres_AQEI
+    html:       https://david-beauchesne.github.io/2021-05-26_Congres_AQEI/
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   - title:      "Cumulative effects assessment - An ecosystem perspective"
     author:
       - family: Beauchesne
