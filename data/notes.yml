@@ -72,4 +72,31 @@ notes:
     notes:
       - "I did not read through the whole article in details, but it would be relevant to do so in the context of continuing the development of eDrivers"
 
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - id: "jacob2020"
+    date: "2021-05-25"
+    tags:
+      - "network"
+      - "management"
+      - "conservation"
+      - "biodiversity"
+      - "ecosystem services"
+      - "multi-layered network"
+      - "network of networks"
+      - "social-ecological network"
+      - "ecosystem-based management"
+      - "systems approach"
+      - "ecological network"
+    projects:
+      - "0001"
+      - "0002"
+    highlights:
+      - "The importance of considering ecosystem as complex systems of interlinked networks"
+      - "We should consider ecosystems as networks of networks, or what they refer to as multi-layered networks, in which links - or interactions - are characterized and can be intra- and inter-network"
+      - "They present a multi-layered network approach for holistic system approach and ecosystem-based management"
+      - "Multi-layered network approach composed of ecological, ecosystem service, social-ecological, threat and conservation strategy networks"
+    notes:
+      - "No demonstration, this is a perspective paper only"
+
+
 ---
