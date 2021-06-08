@@ -2,6 +2,48 @@
 seminar:
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - title: "Les stresseurs environnementaux du Système du Saint-Laurent"
+    author:
+      - family: Beauchesne
+        given: David
+      - family: Daigle
+        given: Rémi M.
+      - family: Vissault
+        given: Steve
+      - family: Gravel
+        given: Dominique
+      - family: Bastien
+        given: Andréanne
+      - family: Bélanger S
+        given: Simon
+      - family: Bernatchez
+        given: Pascal
+      - family: Chion
+        given: Clément
+      - family: Galbraith
+        given: Peter S.
+      - family: Halpern
+        given: Benjamin S.
+      - family: Lavoie
+        given: Camille
+      - family: McKindsey
+        given: Christopher W.
+      - family: Mucci
+        given: Alfonso
+      - family: Starr
+        given: Michel
+      - family: Ste-Marie
+        given: Anne-Sophie
+      - family: Archambault
+        given: Philippe
+    where: Webinaire Québec Océan - Journée Mondiale des Océans
+    prix: Prix de la publication conjointe de 2020
+    date: 2021-06-08
+    github: david-beauchesne/2021-06-08-WebinaireQO
+    html: https://david-beauchesne.github.io/2021-06-08-WebinaireQO/#1
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   - title: "Effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay - Projet pilote - Webinaire d'avancement"
     author:
       - family: Beauchesne
