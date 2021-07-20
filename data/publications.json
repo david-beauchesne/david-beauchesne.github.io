@@ -1,5 +1,50 @@
 [
   {
+    "DOI": "10.1111/ele.13841",
+    "URL": "https://doi.org/10.1111%2Fele.13841",
+    "author": [
+      {
+        "family": "Beauchesne",
+        "given": "David"
+      },
+      {
+        "family": "Cazelles",
+        "given": "Kevin"
+      },
+      {
+        "family": "Archambault",
+        "given": "Philippe"
+      },
+      {
+        "family": "Dee",
+        "given": "Laura E."
+      },
+      {
+        "family": "Gravel",
+        "given": "Dominique"
+      }
+    ],
+    "container-title": "Ecology Letters",
+    "editor": [
+      {
+        "family": "Wootton",
+        "given": "Tim"
+      }
+    ],
+    "id": "Beauchesne_2021",
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          7
+        ]
+      ]
+    },
+    "publisher": "Wiley",
+    "title": "On the sensitivity of food webs to multiple stressors",
+    "type": "article-journal"
+  },
+  {
     "DOI": "10.7717/peerj.9616",
     "URL": "https://doi.org/10.7717%2Fpeerj.9616",
     "author": [
