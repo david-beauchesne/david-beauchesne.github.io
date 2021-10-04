@@ -2,6 +2,17 @@
 seminar:
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - title: "L'évaluation des effets cumulatifs dans un contexte de gestion écosystémique"
+    author:
+      - family: Beauchesne
+        given: David
+    where: Agence d'évaluation d'impact du Canada
+    date: 2021-09-24
+    github: https://github.com/david-beauchesne/2021-09-24-AEIC
+    html: https://david-beauchesne.github.io/2021-09-24-AEIC/#1
+
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   - title: "Les stresseurs environnementaux du Système du Saint-Laurent"
     author:
       - family: Beauchesne
