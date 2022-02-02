@@ -2,6 +2,46 @@
 poster:
 
   # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - title: "An analysis of drivers of environmental change: Investigating the diverging population trends of migratory waterfowl and shorebirds"
+    author:
+      - family: Dale
+        given: Jacob
+      - family: Legagneux
+        given: Pierre
+      - family: Archambault
+        given: Philippe
+      - family: Beauchesne
+        given: David
+    conference:
+      - name: "Réunion scientifique annuelle de Québec Océan"
+        url: ""
+        date: 2021-01-31
+        where: "Online"
+    pdf: ""
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+  - title: "The phenomenology of elastic and inelastic full-waveform imaging LiDAR for improved detection of underwater biological substrates"
+    author:
+      - family: Huot
+        given: Matthieu
+      - family: Rehm 
+        given: Eric
+      - family: Dalgleish
+        given: Fraser
+      - family: Beauchesne
+        given: David
+      - family: Archambault
+        given: Philippe
+      - family: Piché
+        given: Michel
+    conference:
+      - name: "Réunion scientifique annuelle de Québec Océan"
+        url: ""
+        date: 2021-01-31
+        where: "Online"
+    pdf: ""
+
+  # =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
   - title: "La sensibilité des réseaux trophiques à de multiples perturbations"
     author:
       - family: Beauchesne
