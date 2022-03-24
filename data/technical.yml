@@ -1,5 +1,25 @@
 ---
 technical:
+# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
+- id: ceanav2022
+  type: technical-report
+  author:
+    - family: Beauchesne
+      given: David
+    - family: Grant
+      given: Cindy
+    - family: Archambault
+      given: Philippe
+  issued:
+  - year: 2022 
+  title: "Effets cumulatifs des activités maritimes sur le Saint-Laurent et la rivière Saguenay - Projet pilote"
+  title_en: "Cumulative effects assessment of marine vessel activities in the St. Lawrence and the Saguenay River - Pilot project"
+  github: https://github.com/EffetsCumulatifsNavigation/2022-03-TC-webinaire_ceanav
+  html: https://effetscumulatifsnavigation.github.io/2022-03-TC-webinaire_ceanav/
+  github_en: https://github.com/EffetsCumulatifsNavigation/2022-03-TC-webinar_ceanav
+  html_en: https://effetscumulatifsnavigation.github.io/2022-03-TC-webinar_ceanav/
+  
+# =~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~=~-~
 - id: mddelcc2017
   type: technical-report
   author:
