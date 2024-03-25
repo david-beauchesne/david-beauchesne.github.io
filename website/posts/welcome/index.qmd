@@ -1,0 +1,11 @@
+---
+title: "Welcome To My Blog"
+author: "David Beauchesne"
+date: "2024-03-24"
+categories: [news]
+---
+
+![](thumbnail.jpg)
+
+This is the first post in a Quarto blog. Welcome!
+

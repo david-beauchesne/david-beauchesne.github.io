@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "David Beauchesne"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: vitae.qmd
+        text: Vitae
+      - href: blog.qmd
+        text: Blog
+      - href: https://insileco.io/
+        text: inSileco Inc.
+      - href: https://blog.insileco.io/
+        text: inSileco blog
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+      - icon: rss
+        href: index.xml
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+
+
+

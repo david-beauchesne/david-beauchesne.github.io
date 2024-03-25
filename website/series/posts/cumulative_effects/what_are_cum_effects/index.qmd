@@ -1,0 +1,9 @@
+---
+title: "What are cumulative effects"
+author: "David Beauchesne"
+date: "2024-03-28"
+categories: [cumulative effects]
+# image: "gulf.jpg"
+---
+
+This is the first post of a series dedicated to cumulative effects.

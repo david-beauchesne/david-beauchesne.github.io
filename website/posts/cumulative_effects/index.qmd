@@ -1,0 +1,9 @@
+---
+title: "Cumulative effects"
+author: "David Beauchesne"
+date: "2024-03-25"
+categories: [cumulative effects]
+image: "image.jpg"
+---
+
+This is a post on cumulative effects.
