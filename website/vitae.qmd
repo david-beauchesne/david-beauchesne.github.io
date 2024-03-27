@@ -12,6 +12,7 @@ validate-yaml: false
 bibliography:
   publications: data/publications.bib
   seminars: data/seminars.bib
+  technical: data/technical.bib
 csl: website.csl
 
 # Disable citeproc
@@ -29,6 +30,11 @@ nocite: |
 ::: {#refs-publications}
 :::
 
+## Technical reports 
+
+::: {#refs-technical}
+:::
+ 
 ## Seminars
 
 ::: {#refs-seminars}
