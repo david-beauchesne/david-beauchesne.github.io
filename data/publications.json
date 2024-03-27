@@ -1,7 +1,83 @@
 [
   {
+    "DOI": "10.21203/rs.3.rs-3296860/v1",
+    "URL": "http://dx.doi.org/10.21203/rs.3.rs-3296860/v1",
+    "author": [
+      {
+        "family": "Beauchesne",
+        "given": "David"
+      },
+      {
+        "family": "Cazelles",
+        "given": "Kevin"
+      },
+      {
+        "family": "Daigle",
+        "given": "Rémi"
+      },
+      {
+        "family": "Gravel",
+        "given": "Dominique"
+      },
+      {
+        "family": "Archambault",
+        "given": "Philippe"
+      }
+    ],
+    "id": "Beauchesne_2023",
+    "issued": {
+      "date-parts": [
+        [
+          2023,
+          9
+        ]
+      ]
+    },
+    "publisher": "Research Square Platform LLC",
+    "title": "Ecological interactions amplify cumulative effects in marine ecosystems",
+    "type": "article-journal"
+  },
+  {
+    "DOI": "10.3389/fmars.2021.720710",
+    "ISSN": "2296-7745",
+    "URL": "http://dx.doi.org/10.3389/fmars.2021.720710",
+    "author": [
+      {
+        "family": "Isabel",
+        "given": "Laurie"
+      },
+      {
+        "family": "Beauchesne",
+        "given": "David"
+      },
+      {
+        "family": "McKindsey",
+        "given": "Chris"
+      },
+      {
+        "family": "Archambault",
+        "given": "Philippe"
+      }
+    ],
+    "container-title": "Frontiers in Marine Science",
+    "id": "Isabel_2021",
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    },
+    "publisher": "Frontiers Media SA",
+    "title": "Detection of ecological thresholds and selection of indicator taxa for epibenthic communities exposed to multiple pressures",
+    "type": "article-journal",
+    "volume": "8"
+  },
+  {
     "DOI": "10.1111/ele.13841",
-    "URL": "https://doi.org/10.1111%2Fele.13841",
+    "ISSN": "1461-0248",
+    "URL": "http://dx.doi.org/10.1111/ele.13841",
     "author": [
       {
         "family": "Beauchesne",
@@ -32,6 +108,7 @@
       }
     ],
     "id": "Beauchesne_2021",
+    "issue": "10",
     "issued": {
       "date-parts": [
         [
@@ -40,13 +117,16 @@
         ]
       ]
     },
+    "page": "2219-2237",
     "publisher": "Wiley",
     "title": "On the sensitivity of food webs to multiple stressors",
-    "type": "article-journal"
+    "type": "article-journal",
+    "volume": "24"
   },
   {
     "DOI": "10.7717/peerj.9616",
-    "URL": "https://doi.org/10.7717%2Fpeerj.9616",
+    "ISSN": "2167-8359",
+    "URL": "http://dx.doi.org/10.7717/peerj.9616",
     "author": [
       {
         "family": "Fajardo",
@@ -81,8 +161,8 @@
         "given": "Juan I."
       },
       {
-        "family": "Maigua",
-        "given": "Marı́a Yolanda Terán"
+        "family": "Terán Maigua",
+        "given": "María Yolanda"
       },
       {
         "family": "Christofoletti",
@@ -108,7 +188,8 @@
   },
   {
     "DOI": "10.7717/peerj.8171",
-    "URL": "https://doi.org/10.7717%2Fpeerj.8171",
+    "ISSN": "2167-8359",
+    "URL": "http://dx.doi.org/10.7717/peerj.8171",
     "author": [
       {
         "family": "Dreujou",
@@ -166,7 +247,8 @@
   },
   {
     "DOI": "10.3389/fmars.2020.00383",
-    "URL": "https://doi.org/10.3389%2Ffmars.2020.00383",
+    "ISSN": "2296-7745",
+    "URL": "http://dx.doi.org/10.3389/fmars.2020.00383",
     "author": [
       {
         "family": "Beauchesne",
@@ -262,7 +344,8 @@
   },
   {
     "DOI": "10.1038/s41559-019-0950-y",
-    "URL": "https://doi.org/10.1038%2Fs41559-019-0950-y",
+    "ISSN": "2397-334X",
+    "URL": "http://dx.doi.org/10.1038/s41559-019-0950-y",
     "author": [
       {
         "family": "Albouy",
@@ -325,7 +408,7 @@
         "given": "Dominique"
       }
     ],
-    "container-title": "Nature Ecology & Evolution",
+    "container-title": "Nature Ecology &amp; Evolution",
     "id": "Albouy_2019",
     "issue": "8",
     "issued": {
@@ -344,7 +427,8 @@
   },
   {
     "DOI": "10.7202/1036503ar",
-    "URL": "https://doi.org/10.7202%2F1036503ar",
+    "ISSN": "0028-0798",
+    "URL": "http://dx.doi.org/10.7202/1036503ar",
     "author": [
       {
         "family": "Beauchesne",
@@ -363,7 +447,7 @@
         "given": "Philippe"
       }
     ],
-    "container-title": "Le Naturaliste canadien",
+    "container-title": "Conservation/Développement durable",
     "id": "Beauchesne_2016",
     "issue": "2",
     "issued": {
@@ -383,7 +467,8 @@
   },
   {
     "DOI": "10.1016/j.biocon.2014.03.002",
-    "URL": "https://doi.org/10.1016%2Fj.biocon.2014.03.002",
+    "ISSN": "0006-3207",
+    "URL": "http://dx.doi.org/10.1016/j.biocon.2014.03.002",
     "author": [
       {
         "family": "Beauchesne",
@@ -417,7 +502,8 @@
   },
   {
     "DOI": "10.1371/journal.pone.0077514",
-    "URL": "https://doi.org/10.1371%2Fjournal.pone.0077514",
+    "ISSN": "1932-6203",
+    "URL": "http://dx.doi.org/10.1371/journal.pone.0077514",
     "author": [
       {
         "family": "Beauchesne",
@@ -457,7 +543,8 @@
   },
   {
     "DOI": "10.7202/1009105ar",
-    "URL": "https://doi.org/10.7202%2F1009105ar",
+    "ISSN": "0028-0798",
+    "URL": "http://dx.doi.org/10.7202/1009105ar",
     "author": [
       {
         "family": "St-Laurent",
@@ -476,7 +563,7 @@
         "given": "David"
       }
     ],
-    "container-title": "Les routes et la grande faune",
+    "container-title": "Le Naturaliste canadien",
     "id": "St_Laurent_2012",
     "issue": "2",
     "issued": {

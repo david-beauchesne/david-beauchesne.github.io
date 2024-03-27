@@ -81,7 +81,7 @@
     "href": "vitae.html#publications",
     "title": "Curriculum vitae",
     "section": "Publications",
-    "text": "Publications"
+    "text": "Publications\n\n\n1. Beauchesne, D., Cazelles, K., Daigle, R., Gravel, D. & Archambault, P. Ecological interactions amplify cumulative effects in marine ecosystems. (2023) doi:10.21203/rs.3.rs-3296860/v1.\n\n\n2. Isabel, L., Beauchesne, D., McKindsey, C. & Archambault, P. Detection of ecological thresholds and selection of indicator taxa for epibenthic communities exposed to multiple pressures. Frontiers in Marine Science 8, (2021).\n\n\n3. Beauchesne, D., Cazelles, K., Archambault, P., Dee, L. E. & Gravel, D. On the sensitivity of food webs to multiple stressors. Ecology Letters 24, 2219–2237 (2021).\n\n\n4. Fajardo, P. et al. Aichi target 18 beyond 2020: Mainstreaming traditional biodiversity knowledge in the conservation and sustainable use of marine and coastal ecosystems. PeerJ 9, e9616 (2021).\n\n\n5. Dreujou, E. et al. Holistic environmental approaches and aichi biodiversity targets: Accomplishments and perspectives for marine ecosystems. PeerJ 8, e8171 (2020).\n\n\n6. Beauchesne, D. et al. Characterizing exposure to and sharing knowledge of drivers of environmental change in the st. Lawrence system in canada. Frontiers in Marine Science 7, (2020).\n\n\n7. Albouy, C. et al. The marine fish food web is globally connected. Nature Ecology &amp; Evolution 3, 1153–1161 (2019).\n\n\n8. Beauchesne, D., Grant, C., Gravel, D. & Archambault, P. L’évaluation des impacts cumulés dans l’estuaire et le golfe du saint-laurent : Vers une planification systémique de l’exploitation des ressources. Conservation/Développement durable 140, 45–55 (2016).\n\n\n9. Beauchesne, D., Jaeger, J. A. G. & St-Laurent, M.-H. Thresholds in the capacity of boreal caribou to cope with cumulative disturbances: Evidence from space use patterns. Biological Conservation 172, 190–199 (2014).\n\n\n10. Beauchesne, D., Jaeger, J. AG. & St-Laurent, M.-H. Disentangling woodland caribou movements in response to clearcuts and roads across temporal scales. PLoS ONE 8, e77514 (2013).\n\n\n11. St-Laurent, M.-H., Renaud, L.-A., Leblond, M. & Beauchesne, D. Synthèse des connaissances relatives aux impacts des routes sur l’écologie du caribou. Le Naturaliste canadien 136, 42–47 (2012)."
   },
   {
     "objectID": "vitae.html#presentations",
@@ -89,5 +89,26 @@
     "title": "Curriculum vitae",
     "section": "Presentations",
     "text": "Presentations"
+  },
+  {
+    "objectID": "vitae.html",
+    "href": "vitae.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2020. Rmarkdown: Dynamic Documents for r. Manual.\n\n\nBache, Stefan Milton, and Hadley Wickham. 2014. Magrittr: A Forward-Pipe Operator for r. Manual.\n\n\nBeauchesne, David. 2020. eDrivers: Data on Drivers of Environmental Change in the St. Lawrence System in Eastern Canada. Manual."
+  },
+  {
+    "objectID": "vitae.html#education",
+    "href": "vitae.html#education",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2020. Rmarkdown: Dynamic Documents for r. Manual.\n\n\nBache, Stefan Milton, and Hadley Wickham. 2014. Magrittr: A Forward-Pipe Operator for r. Manual.\n\n\nBeauchesne, David. 2020. eDrivers: Data on Drivers of Environmental Change in the St. Lawrence System in Eastern Canada. Manual."
+  },
+  {
+    "objectID": "vitae.html#seminars",
+    "href": "vitae.html#seminars",
+    "title": "Curriculum vitae",
+    "section": "Seminars",
+    "text": "Seminars\n\n\n1. Bivand, R. S., Pebesma, E. & Gomez-Rubio, V. Applied Spatial Data Analysis with R, Second Edition. (Springer, NY, 2013).\n\n\n2. Boettiger, C., Lang, D. T. & Wainwright, P. C. Rfishbase: Exploring, manipulating and visualizing FishBase data from R. Journal of Fish Biology 81, 2030–2039 (2012).\n\n\n3. Chamberlain, S. A. & Szöcs, E. Taxize: Taxonomic search and retrieval in R. F1000Research 2, (2013)."
   }
 ]

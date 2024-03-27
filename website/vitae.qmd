@@ -1,9 +1,38 @@
 ---
 title: "Curriculum vitae"
+
+# Use the multibib extension
+filters:
+  - multibib
+
+# Turn off YAML validation
+validate-yaml: false
+
+# Define list of separate bibliography files
+bibliography:
+  publications: data/publications.bib
+  seminars: data/seminars.bib
+csl: website.csl
+
+# Disable citeproc
+citeproc: false
+
+# Print all references
+nocite: |
+  @*
 ---
 
 ## Education
 
 ## Publications
 
+::: {#refs-publications}
+:::
+
+## Seminars
+
+::: {#refs-seminars}
+:::
+
 ## Presentations
+
