@@ -1,3 +1,6 @@
 /.quarto/
 .DS_Store
 .httr-oauth
+
+# Specific files
+.plan.qmd
