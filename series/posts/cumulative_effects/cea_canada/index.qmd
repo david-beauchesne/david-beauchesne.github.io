@@ -1,9 +1,0 @@
----
-title: "Cumulative effects assessments in Canada"
-author: "David Beauchesne"
-date: "2024-03-29"
-categories: [cumulative effects]
-# image: "gulf.jpg"
----
-
-Post on assessing cumulative effects in Canada

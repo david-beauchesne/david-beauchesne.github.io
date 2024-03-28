@@ -18,5 +18,11 @@ title-block-banner: true
 toc: false
 ---
 
+Welcome to this series dedicated to cumulative effects! 
 
-This is the beginning of a series dedicated to cumulative effects, if it ever works
+The [first post](link.here) of this series is a brief walk down memory lane explaining how I got here. If you are not interested in my personal story (why should you be?!?), then dive right into the other posts. My goal is to explore anything and everything related to cumulative effects in this post, both from a personal and professional standpoint. 
+
+Do not hesitate to [reach out](mailto:david.beauchesne@insileco.io) if you have any thoughts, comments or insults! 
+
+Enjoy! 
+

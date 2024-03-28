@@ -2,9 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/series/posts/cumulative_effects/cea_canada/index.html",
-      "/series/posts/cumulative_effects/what_are_cum_effects/index.html",
-      "/posts/cumulative_effects/index.html",
+      "/series/posts/cumulative_effects/welcome/index.html",
       "/posts/welcome/index.html",
       "/series/main/cumulative_effects/index.html"
     ]
@@ -12,17 +10,14 @@
   {
     "listing": "/index.html",
     "items": [
-      "/series/posts/cumulative_effects/cea_canada/index.html",
-      "/series/posts/cumulative_effects/what_are_cum_effects/index.html",
-      "/posts/cumulative_effects/index.html",
+      "/series/posts/cumulative_effects/welcome/index.html",
       "/posts/welcome/index.html"
     ]
   },
   {
     "listing": "/series/main/cumulative_effects/index.html",
     "items": [
-      "/series/posts/cumulative_effects/cea_canada/index.html",
-      "/series/posts/cumulative_effects/what_are_cum_effects/index.html"
+      "/series/posts/cumulative_effects/welcome/index.html"
     ]
   }
 ]

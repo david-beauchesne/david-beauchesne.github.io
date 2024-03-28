@@ -30,3 +30,21 @@ format:
     theme: sandstone
     css: styles.css
     toc: true
+
+# Use the multibib extension
+filters:
+  - multibib
+
+# Turn off YAML validation
+validate-yaml: false
+
+# Disable citeproc
+citeproc: false
+
+# Bibliographies
+bibliography:
+  main: data/main.bib
+  publications: data/publications.bib
+  seminars: data/seminars.bib
+  technical: data/technical.bib
+csl: website.csl

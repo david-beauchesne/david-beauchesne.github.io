@@ -1,0 +1,30 @@
+---
+title: "Welcome"
+author: "David Beauchesne"
+date: "2024-03-28"
+categories: [news, cumulative effects]
+image: "halpern.jpeg"
+---
+
+Welcome to the beginning of a series dedicated to cumulative effects. In truth, it began a decade ago when I started a PhD in marine biology at the Institut des sciences de la mer (ISMER), a research institute of the Université du Québec à Rimouski in Québec, Canada. At the time, I thought I was signing up to do field and lab work, perhaps sprinkling in some mesocosm experiments. I quickly realized that the scientific questions I found fascinating would lead to countless hours behind a computer rather than looking through a microscope. 
+
+The thread guiding the past decade of my professional career has been to promote and apply holistic approaches for environmental management. As an ecologist, my main focus has been the conservation and management of species embedded in complex networks, Darwin's famed web of life, and exposed to a multitude of environmental pressures such as climate change, industrialization and commercial fishing. 
+
+As I reflect, it feels like a natural evolution that my interests have led me to delve into the realm of cumulative effects assessments. This transition was not only propelled by my own curiosity but also guided by the strategic influence of my supervisor, [Philippe Archambault](https://www.fsg.ulaval.ca/departements/professeurs/philippe-archambault-454). I still recall when Philippe told me I should read a paper authored by [Benjamin Halpern](https://msi.ucsb.edu/people/faculty/ben-halpern) on [cumulative effects on our oceans worldwide](https://doi-org.acces.bibl.ulaval.ca/10.1126/science.1149345) [@halpern2008a]. This seminal work laid the foundation for my deep dive into this fascinating field.
+
+As my work on cumulative effects progressed, I quickly became aware of the paradox between the cited data limitations for proper environmental assessments and the expanding corpus of data openly available across all scientific fields. At the same time, I also recognized the potential value of new technologies to operationalize and promote adaptive environmental management. I therefore adjusted my path and expanded my toolkit to become a data scientist focused on open data and reproducibility.
+
+Fast forward 10 years. I completed my PhD (with two kids along the way!), have been (and still am as of this writing) a postdoctoral fellow first at Université Laval in Québec City, then at the University of Toronto, and co-founded a startup called [*inSileco*](https://insileco.io/) whose purpose is to provide consulting and educational services for the application of open and reproducible science in general and for environmental management in particular.
+
+On the edge of preparing two new scientific manuscripts focused on potential solutions to improve cumulative effect assessments, I realized that I struggled to structure my thoughts coherently. I also realized that there are some lingering gaps in my understanding of certain aspects of the field. What better way to structure and explore than through free writing unconstrained by the rules of scholarly writing? 
+
+Perhaps I should have started this a decade ago, but here we are. In this series, I intend to explore the many facets of cumulative effects, going from what they are to how they are assessed throughout the world. The selfish reason for me to do this is to document and structure my own thoughts. I will, however, rejoice if it may be helpful to someone else along the way.
+
+Enjoy your reading! 
+
+<br> 
+
+#### References
+
+::: {#refs-main}
+:::
