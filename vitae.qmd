@@ -4,27 +4,33 @@ nocite: |
   @*
 ---
 
-## Education
+## {{< fa university >}} Education
 
-## Publications
+
+## {{< fa scroll >}} Publications
 
 ::: {#refs-publications}
 :::
 
-## Book chapters
+## {{< fa book-open >}} Book chapters
 
+<!-- 
 ::: {#refs-books}
-:::
+::: -->
 
 
-## Technical reports 
+## {{< fa file-alt >}} Technical reports 
 
 ::: {#refs-technical}
 :::
  
-## Seminars & conferences
+## {{< fa users >}} Seminars & conferences
 
 ::: {#refs-seminars}
 :::
 
 
+## {{< fa images >}} Posters
+
+<!-- ::: {#refs-posters}
+::: -->
