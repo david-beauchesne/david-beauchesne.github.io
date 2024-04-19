@@ -47,4 +47,5 @@ bibliography:
   publications: data/publications.bib
   seminars: data/seminars.bib
   technical: data/technical.bib
+  book: data/book.bib
 csl: website.csl

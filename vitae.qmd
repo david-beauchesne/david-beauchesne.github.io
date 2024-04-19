@@ -11,15 +11,20 @@ nocite: |
 ::: {#refs-publications}
 :::
 
+## Book chapters
+
+::: {#refs-books}
+:::
+
+
 ## Technical reports 
 
 ::: {#refs-technical}
 :::
  
-## Seminars
+## Seminars & conferences
 
 ::: {#refs-seminars}
 :::
 
-## Presentations
 
