@@ -3,6 +3,7 @@ title: "First things first: what are cumulative effects?"
 author: "David Beauchesne"
 date: "2024-03-28"
 categories: [cumulative effects]
+draft: true
 # image: "halpern.jpeg"
 ---
 

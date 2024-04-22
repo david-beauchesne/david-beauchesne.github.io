@@ -4,7 +4,7 @@ listing:
   - id: latest-blog
     contents: 
       - posts/
-      - series/posts
+      - series/
     max-items: 6
     sort:
       - "date desc"
@@ -16,7 +16,8 @@ listing:
     # feed: true
     
   - id: series-blog
-    contents: series/main/
+    contents: 
+      - series/main/
     max-items: 6
     sort: 
       - "date desc"

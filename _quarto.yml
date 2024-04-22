@@ -15,8 +15,8 @@ website:
         text: inSileco Inc.
       - href: https://blog.insileco.io/
         text: inSileco blog
-      - href: about.qmd
-        text: About
+      # - href: about.qmd
+      #   text: About
     right:
       - icon: github
         href: https://github.com/
