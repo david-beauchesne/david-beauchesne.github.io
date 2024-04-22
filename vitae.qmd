@@ -128,9 +128,9 @@ nocite: |
 
 ## {{< fa book-open >}} Book chapters
 
-<!-- 
-::: {#refs-books}
-::: -->
+
+::: {#refs-book}
+:::
 
 <br> 
 
@@ -150,5 +150,5 @@ nocite: |
 
 ## {{< fa images >}} Posters
 
-<!-- ::: {#refs-posters}
-::: -->
+::: {#refs-posters}
+:::

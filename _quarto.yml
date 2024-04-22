@@ -34,6 +34,11 @@ format:
 # Use the multibib extension
 filters:
   - multibib
+  # - bold-auth-name.lua
+
+# bold-auth-name:
+  # - family: Beauchesne
+    # given: David
 
 # Turn off YAML validation
 validate-yaml: false
@@ -48,4 +53,5 @@ bibliography:
   seminars: data/seminars.bib
   technical: data/technical.bib
   book: data/book.bib
+  posters: data/posters.bib
 csl: website.csl

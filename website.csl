@@ -146,7 +146,11 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
-  <bibliography et-al-min="6" et-al-use-first="1" second-field-align="flush" entry-spacing="1" line-spacing="2">
+  <bibliography et-al-min="20" et-al-use-first="1" second-field-align="flush" entry-spacing="1" line-spacing="2">
+    <sort>
+      <key macro="issuance" sort="descending"/>
+      <key macro="author"/>
+    </sort>
     <layout suffix=".">
       <text variable="citation-number" suffix="."/>
       <group delimiter=" ">
