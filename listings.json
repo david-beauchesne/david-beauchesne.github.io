@@ -1,0 +1,24 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/series/main/cumulative_effects/index.html",
+      "/series/posts/cumulative_effects/welcome/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/series/main/cumulative_effects/index.html",
+      "/series/posts/cumulative_effects/welcome/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/series/main/cumulative_effects/index.html",
+    "items": [
+      "/series/posts/cumulative_effects/welcome/index.html"
+    ]
+  }
+]
