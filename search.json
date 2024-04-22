@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "series/main/cumulative_effects/index.html",
+    "href": "series/main/cumulative_effects/index.html",
+    "title": "Cumulative effects",
+    "section": "",
+    "text": "Welcome to this series dedicated to cumulative effects!\nThe first post of this series is a brief walk down memory lane explaining how I got here. If you are not interested in my personal story (why should you be?!?), then dive right into the other posts. My goal is to explore anything and everything related to cumulative effects in this series, both from a personal and from a professional standpoint.\nDo not hesitate to reach out if you have any thoughts, comments or insults!\nEnjoy!\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\nnews\n\n\ncumulative effects\n\n\n\n\n\n\n\nDavid Beauchesne\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Ecosystem assessments blog",
@@ -19,48 +26,6 @@
     "title": "Ecosystem assessments blog",
     "section": "Series",
     "text": "Series\n\n\n\n\n\n\n\n\n\n\nCumulative effects\n\n\n\ncumulative effects\n\n\n\n\n\n\n\nDavid Beauchesne\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "David Beauchesne",
-    "section": "",
-    "text": "I am David Beauchesne, a postdoctoral fellow at the University of Toronto with 10+ years of experience on ecosystem-based management in general and cumulative effects assessment in particular, relying heavily on data science, reproducibility and sound data management practices.\nFind out more about me here."
-  },
-  {
-    "objectID": "index.html#latest",
-    "href": "index.html#latest",
-    "title": "David Beauchesne",
-    "section": "Latest",
-    "text": "Latest\n\n\n\n\n\n\n\n\n\n\nCumulative effects\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#blog",
-    "href": "index.html#blog",
-    "title": "David Beauchesne",
-    "section": "Blog",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nCumulative effects\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\nI recently decided to finally build my own website, including a blog, after many failed attempts throughout the years. My typical workflow has been to initiate a website with a tool I did not have time to fully commit to, then proceed to lose interest and whatever expertise I gleaned from using the chosen tool. Of course, I focused on the format rather than the content, so I kept being left with nothing functional to work with. Lather, rinse, repeat.\nThis time around, I had an incentive to switch from using RMarkdown to Quarto, a move we agreed upon in the startup I co-founded, inSileco. Quarto is (so far) amazingly simple and straightforward to use to build websites, so I figured that I might as well take the opportunity to build my own website with a tool that I know I will be using for the foreseeable future.\nAs a nod to Quarto, I decided to directly use their template for the first blog post “Welcome To My Blog”.\nWelcome to my blog!"
-  },
-  {
-    "objectID": "series/posts/cumulative_effects/welcome/index.html",
-    "href": "series/posts/cumulative_effects/welcome/index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome to the beginning of a series dedicated to cumulative effects. In truth, it began a decade ago when I started a PhD in marine biology at the Institut des sciences de la mer (ISMER), a research institute of the Université du Québec à Rimouski in Québec, Canada. At the time, I thought I was signing up to do field and lab work, perhaps sprinkling in some mesocosm experiments. I quickly realized that the scientific questions I found fascinating would lead to countless hours behind a computer rather than looking through a microscope.\nThe thread guiding the past decade of my professional career has been to promote and apply holistic approaches for environmental management. As an ecologist, my main focus has been the conservation and management of species embedded in complex networks, Darwin’s famed web of life, and exposed to a multitude of environmental pressures such as climate change, industrialization and commercial fishing.\nAs I reflect, it feels like a natural evolution that my interests have led me to delve into the realm of cumulative effects assessments. This transition was not only propelled by my own curiosity but also guided by the strategic influence of my supervisor, Philippe Archambault. I still recall when Philippe told me I should read a paper authored by Benjamin Halpern on cumulative effects on our oceans worldwide1. This seminal work laid the foundation for my deep dive into this fascinating field.\nAs my work on cumulative effects progressed, I quickly became aware of the paradox between the cited data limitations for proper environmental assessments and the expanding corpus of data openly available across all scientific fields. At the same time, I also recognized the potential value of new technologies to operationalize and promote adaptive environmental management. I therefore adjusted my path and expanded my toolkit to become a data scientist focused on open data and reproducibility.\nFast forward 10 years. I completed my PhD (with two kids along the way!), have been (and still am as of this writing) a postdoctoral fellow first at Université Laval in Québec City, then at the University of Toronto, and co-founded a startup called inSileco whose purpose is to provide consulting and educational services for the application of open and reproducible science in general and for environmental management in particular.\nOn the edge of preparing two new scientific manuscripts focused on potential solutions to improve cumulative effect assessments, I realized that I struggled to structure my thoughts coherently. I also realized that there are some lingering gaps in my understanding of certain aspects of the field. What better way to structure and explore than through free writing unconstrained by the rules of scholarly writing?\nPerhaps I should have started this a decade ago, but here we are. In this series, I intend to explore the many facets of cumulative effects, going from what they are to how they are assessed throughout the world. The selfish reason for me to do this is to document and structure my own thoughts. I will, however, rejoice if it may be helpful to someone else along the way.\nEnjoy your reading!\n\n\nReferences\n\n\n1. Halpern, B. S., Walbridge, S., Selkoe, K. A., Kappel, C. V., Micheli, F., D’Agrosa, C., Bruno, J. F., Casey, K. S., Ebert, C., Fox, H. E., Fujita, R., Heinemann, D., Lenihan, H. S., Madin, E. M. P., Perry, M. T., Selig, E. R., Spalding, M., Steneck, R. & Watson, R. A Global Map of Human Impact on Marine Ecosystems. Science 319, 948–952 (2008)."
-  },
-  {
-    "objectID": "series/main/cumulative_effects/index.html",
-    "href": "series/main/cumulative_effects/index.html",
-    "title": "Cumulative effects",
-    "section": "",
-    "text": "Welcome to this series dedicated to cumulative effects!\nThe first post of this series is a brief walk down memory lane explaining how I got here. If you are not interested in my personal story (why should you be?!?), then dive right into the other posts. My goal is to explore anything and everything related to cumulative effects in this series, both from a personal and from a professional standpoint.\nDo not hesitate to reach out if you have any thoughts, comments or insults!\nEnjoy!\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\nnews\n\n\ncumulative effects\n\n\n\n\n\n\n\nDavid Beauchesne\n\n\nApr 12, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "vitae.html#contact",
@@ -117,5 +82,40 @@
     "title": "Curriculum vitae",
     "section": " Posters",
     "text": "Posters\n\n\n1. Dale, J., Archambault, P., Legagneux, P. & Beauchesne, D. An analysis of drivers of environmental change: Investigating the diverging population trends of migratory waterfowl and shorebirds. (2021).\n\n\n2. Huot, M., Rehm, E., Dalgleish, F., Beauchesne, D., Archambault, P. & Piché, P. The phenomenology of elastic and inelastic full-waveform imaging LiDAR for improved detection of underwater biological substrates. (2021).\n\n\n3. Beauchesne, D., Cazelles, K., Archambault, P. & Gravel, D. La sensibilité des réseaux trophiques à de multiples perturbations. (2019).\n\n\n4. Huot, M., Dalgleish, F., Vuorenkoski, A., Rehm, E., Beauchesne, D., Archambault, P. & Piché, P. Multispectral laser serial imaging techniques for spectral discrimination of macroalgae and coral. (2019).\n\n\n5. Beauchesne, D., Daigle, R. M., Vissault, S., Gravel, D., Bastien, A., Bélanger, S., Bernatchez, P., Blais, M., Bourdages, H., Chion, C., Galbraith, P. S., Halpern, B. S., Lavoie, C., McKindsey, C. W., Mucci, A., Pineault, S., Starr, M., Ste-Marie, A.-S. & Archambault, P. Next Generation Planning - Structuring and Sharing Environmental Drivers Data for the St. Lawrence. (2018).\n\n\n6. Beauchesne, D., Daigle, R. M., Vissault, S., Gravel, D., Bélanger, S., Bernatchez, P., Chion, C., Galbraith, P. S., McKindsey, C. W., Mucci, A., Starr, M. & Archambault, P. Regional assessment of cumulative impacts in the St. Lawrence system. (2018).\n\n\n7. Beauchesne, D., Daigle, R. M., Vissault, S., Gravel, D., Bélanger, S., Bernatchez, P., Chion, C., Galbraith, P. S., McKindsey, C. W., Mucci, A., Starr, M. & Archambault, P. Évaluation régionale des impacts cumulés sur le système du Saint-Laurent. (2018).\n\n\n8. Beauchesne, D., Cazelles, K., Blanchet, F. G., Gravel, D. & Archambault, P. Predicting the spatial distribution of ecological networks. (2017).\n\n\n9. Beauchesne, D., Daigle, R. M., Gravel, D., Bélanger, S., Bernatchez, P., Chion, C., Galbraith, P. S., Halpern, B. S., Lavoie, C., McKindsey, C. W., Starr, M., Tremblay, C., Vissault, S. & Archambault, P. Next Generation Planning - Structuring and Sharing Environmental Drivers Data for the St. Lawrence. (2017).\n\n\n10. Beauchesne, D., Gravel, D. & Archambault, P. Cumulative impacts on the communities of the estuary and the gulf of St. Lawrence. (2017).\n\n\n11. Beauchesne, D., Gravel, D. & Archambault, P. Évaluation des impacts cumulés sur les communautés benthiques et pélagiques de l’estuaire et du golfe du Saint-Laurent. (2015).\n\n\n12. Beauchesne, D., Gravel, D. & Archambault, P. Évaluation des impacts cumulés sur les communautés de l’estuaire et du golfe du Saint-Laurent. (2015).\n\n\n13. Beauchesne, D., Faille, G., Grant, C., Archambault, P. & Brêthes, J.-C. Identification de milieux d’intérêt pour la conservation dans un contexte de protection du milieu marin et côtier. (2014).\n\n\n14. St-Laurent, M.-H., Ouellet, J.-P., Dussault, C., Lesmerises, R., Renaud, L.-A. & Beauchesne, D. Impacts directs et indirects de l’aménagement des forêts sur l’écologie du caribou forestier. (2011).\n\n\n15. Beauchesne, D., Hamel Pepin, R. & Morissette, L. Prédation bénéfique : Comment les mammifères marins peuvent avantager leurs proies. (2008).\n\n\n16. Beauchesne, D. Conservation de la tortue mouchetée en Nouvelle-Écosse. (2007)."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\nI recently decided to finally build my own website, including a blog, after many failed attempts throughout the years. My typical workflow has been to initiate a website with a tool I did not have time to fully commit to, then proceed to lose interest and whatever expertise I gleaned from using the chosen tool. Of course, I focused on the format rather than the content, so I kept being left with nothing functional to work with. Lather, rinse, repeat.\nThis time around, I had an incentive to switch from using RMarkdown to Quarto, a move we agreed upon in the startup I co-founded, inSileco. Quarto is (so far) amazingly simple and straightforward to use to build websites, so I figured that I might as well take the opportunity to build my own website with a tool that I know I will be using for the foreseeable future.\nAs a nod to Quarto, I decided to directly use their template for the first blog post “Welcome To My Blog”.\nWelcome to my blog!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "David Beauchesne",
+    "section": "",
+    "text": "I am David Beauchesne, a postdoctoral fellow at the University of Toronto with 10+ years of experience on ecosystem-based management in general and cumulative effects assessment in particular, relying heavily on data science, reproducibility and sound data management practices.\nFind out more about me here."
+  },
+  {
+    "objectID": "index.html#latest",
+    "href": "index.html#latest",
+    "title": "David Beauchesne",
+    "section": "Latest",
+    "text": "Latest\n\n\n\n\n\n\n\n\n\n\nCumulative effects\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#blog",
+    "href": "index.html#blog",
+    "title": "David Beauchesne",
+    "section": "Blog",
+    "text": "Blog\n\n\n\n\n\n\n\n\n\n\nCumulative effects\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\n\n\nMar 28, 2024\n\n\nDavid Beauchesne\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "series/posts/cumulative_effects/welcome/index.html",
+    "href": "series/posts/cumulative_effects/welcome/index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to the beginning of a series dedicated to cumulative effects. In truth, it began a decade ago when I started a PhD in marine biology at the Institut des sciences de la mer (ISMER), a research institute of the Université du Québec à Rimouski in Québec, Canada. At the time, I thought I was signing up to do field and lab work, perhaps sprinkling in some mesocosm experiments. I quickly realized that the scientific questions I found fascinating would lead to countless hours behind a computer rather than looking through a microscope.\nThe thread guiding the past decade of my professional career has been to promote and apply holistic approaches for environmental management. As an ecologist, my main focus has been the conservation and management of species embedded in complex networks, Darwin’s famed web of life, and exposed to a multitude of environmental pressures such as climate change, industrialization and commercial fishing.\nAs I reflect, it feels like a natural evolution that my interests have led me to delve into the realm of cumulative effects assessments. This transition was not only propelled by my own curiosity but also guided by the strategic influence of my supervisor, Philippe Archambault. I still recall when Philippe told me I should read a paper authored by Benjamin Halpern on cumulative effects on our oceans worldwide1. This seminal work laid the foundation for my deep dive into this fascinating field.\nAs my work on cumulative effects progressed, I quickly became aware of the paradox between the cited data limitations for proper environmental assessments and the expanding corpus of data openly available across all scientific fields. At the same time, I also recognized the potential value of new technologies to operationalize and promote adaptive environmental management. I therefore adjusted my path and expanded my toolkit to become a data scientist focused on open data and reproducibility.\nFast forward 10 years. I completed my PhD (with two kids along the way!), have been (and still am as of this writing) a postdoctoral fellow first at Université Laval in Québec City, then at the University of Toronto, and co-founded a startup called inSileco whose purpose is to provide consulting and educational services for the application of open and reproducible science in general and for environmental management in particular.\nOn the edge of preparing two new scientific manuscripts focused on potential solutions to improve cumulative effect assessments, I realized that I struggled to structure my thoughts coherently. I also realized that there are some lingering gaps in my understanding of certain aspects of the field. What better way to structure and explore than through free writing unconstrained by the rules of scholarly writing?\nPerhaps I should have started this a decade ago, but here we are. In this series, I intend to explore the many facets of cumulative effects, going from what they are to how they are assessed throughout the world. The selfish reason for me to do this is to document and structure my own thoughts. I will, however, rejoice if it may be helpful to someone else along the way.\nEnjoy your reading!\n\n\nReferences\n\n\n1. Halpern, B. S., Walbridge, S., Selkoe, K. A., Kappel, C. V., Micheli, F., D’Agrosa, C., Bruno, J. F., Casey, K. S., Ebert, C., Fox, H. E., Fujita, R., Heinemann, D., Lenihan, H. S., Madin, E. M. P., Perry, M. T., Selig, E. R., Spalding, M., Steneck, R. & Watson, R. A Global Map of Human Impact on Marine Ecosystems. Science 319, 948–952 (2008)."
   }
 ]
