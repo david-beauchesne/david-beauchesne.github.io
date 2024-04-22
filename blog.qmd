@@ -1,0 +1,43 @@
+---
+title: "Ecosystem assessments blog"
+listing:
+  - id: latest-blog
+    contents: 
+      - posts/
+      - series/
+    max-items: 6
+    sort:
+      - "date desc"
+      - "title asc"
+    type: grid
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    # feed: true
+    
+  - id: series-blog
+    contents: 
+      - series/main/
+    max-items: 6
+    sort: 
+      - "date desc"
+      - "title asc"
+    type: grid
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    # feed: true
+page-layout: full
+title-block-banner: true
+toc: true
+---
+
+This is some text before the list of posts
+
+## Latest
+:::{#latest-blog}
+:::
+
+## Series
+:::{#series-blog}
+:::

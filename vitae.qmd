@@ -1,0 +1,154 @@
+---
+title: "Curriculum vitae"
+nocite: |
+  @*
+---
+
+<br> 
+
+## {{< fa address-card >}} Contact
+
+<b>David Beauchesne, PhD</b><br/>
+<small>University of Toronto - Postdoctoral researcher</small><br/>
+<small>inSileco - Co-founder & data scientist</small><br/>
+<small>david.beauchesne@insileco.io</small><br/>
+<small>1.514.553.4974</small><br/>
+[{{< fa envelope size=lg >}}](mailto:david.beauchesne@insileco.io)
+[{{< fa globe size=lg >}}](https://david.beauchesne.insileco.io)
+[{{< fa brands github size=lg >}}](https://github.com/david-beauchesne)
+[{{< fa brands orcid size=lg >}}](https://www.orcid.org/0000-0002-3590-8161)
+<!-- [{{< fa brands google-scholar size=lg >}}](https://scholar.google.ca/citations?user=8YPeWfgAAAAJ&hl=en&oi=ao$$) -->
+[{{< fa brands linkedin size=lg >}}](https://www.linkedin.com/in/david-beauchesne-16683353/)
+[{{< fa brands researchgate size=lg >}}](https://www.researchgate.net/profile/David_Beauchesne)
+
+## {{< fa briefcase >}} Professional experiences
+
+<ul class="fa-ul">
+   <li><span class="fa-li"><i class='fas fa-university' aria-hidden="true"></i></span> <b> Postdoctoral fellow </b>
+    <span style="float:right;">2022/09 - present</span>
+    <br>
+    <em> University of Toronto Scarborough </em>
+    <span style="float:right;">Toronto, ON, CA</span>
+    <br>
+    <p style="width:75%;">
+      <b>Supervisor:</b> Leonard Tsuji
+      <a href="https://www.utsc.utoronto.ca/healthsociety/len-tsuji"><i class="far fa-globe" aria-hidden="true"></i></a>
+      <br>
+      <b>Subject:</b>  Cumulative effects to Indigenous wellbeing
+    </p>
+</ul>
+
+<ul class="fa-ul">
+   <li><span class="fa-li"><i class='fas fa-user-tie' aria-hidden="true"></i></span> <b> Co-founder & data scientist </b>
+    <span style="float:right;">2020/04 - present</span>
+    <br>
+    <em> inSileco </em>
+    <a href="https://insileco.io"><i class="far fa-globe" aria-hidden="true"></i></a>
+    <span style="float:right;">Québec, QC, CA</span>
+    <br>
+    <p style="width:75%;">
+      <b>Description:</b> inSileco is a startup in the fields of data science and reproducibility applied to environmental management issues
+    </p>
+</ul>
+
+<ul class="fa-ul">
+   <li><span class="fa-li"><i class='fas fa-university' aria-hidden="true"></i></span> <b> Postdoctoral fellow </b>
+    <span style="float:right;">2019/11 - 2022/03</span>
+    <br>
+    <em> Université Laval </em>
+    <span style="float:right;">Québec, QC, CA</span>
+    <br>
+    <p style="width:75%;">
+      <b>Supervisors:</b> Philippe Archambault
+      <a href="https://www.fsg.ulaval.ca/departements/professeurs/philippe-archambault-454"><i class="far fa-globe" aria-hidden="true"></i></a>
+      <br>
+      <b>Subject:</b> Cumulative effects assessments in eastern Canada
+    </p>
+</ul>
+
+<br> 
+
+## {{< fa university >}} Education
+
+<ul class="fa-ul">
+   <li><span class="fa-li"><i class='fas fa-graduation-cap' aria-hidden="true"></i></span><b> Ph.D. in oceanography </b>
+    <span style="float:right;">2014-2020</span>
+    <br>
+    <em> Institut des sciences de la mer, Université du Québec à Rimouski </em>
+    <span style="float:right;">Rimouski, QC, CA</span>
+    <br>
+    <p style="width:75%;">
+      <b>Supervisors:</b> Philippe Archambault
+      <a href="https://www.fsg.ulaval.ca/departements/professeurs/philippe-archambault-454"><i class="far fa-globe" aria-hidden="true"></i></a>
+      Dominique Gravel
+      <a href="https://www.usherbrooke.ca/biologie/nous-joindre/personnel/corps-professoral/ecologie-terrestre/dominique-gravel"><i class="far fa-globe" aria-hidden="true"></i></a>
+      <br>
+      <b>Thesis: </b> Assessment of the cumulative effects of global changes on ecosystems - The case of the estuary and Gulf of St. Lawrence
+      <br>
+      <b>Mention: </b> Excellent
+    </p>
+</ul>
+
+<ul class="fa-ul">
+    <li><span class="fa-li"><i class='fas fa-graduation-cap' aria-hidden="true"></i></span><b> M.Sc. in Geography, Planning & Environment </b>
+    <span style="float:right;">2009-2012</span>
+    <br>
+    <em> Concordia University </em>
+    <span style="float:right;">Montréal, QC, CA</span>
+    <br>
+    <p style="width:75%;">
+      <b>Supervisors:</b> Jochen Jaeger
+      <a href="https://www.concordia.ca/faculty/jochen-a-g-jaeger.html"><i class="far fa-globe" aria-hidden="true"></i></a>
+      Martin-Hugues St-Laurent
+      <a href="https://www.uqar.ca/universite/a-propos-de-l-uqar/departements/departement-de-biologie-chimie-et-geographie/st-laurent-martin-hugues"><i class="far fa-globe" aria-hidden="true"></i></a>
+      <br>
+      <b>Thesis: </b> Influence of disturbances on the movements of female woodland caribou (Rangifer tarandus caribou) across multiple spatiotemporal scales
+      <a href="https://spectrum.library.concordia.ca/id/eprint/973904/"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+    </p>
+</ul>
+
+<ul class="fa-ul">
+    <li><span class="fa-li"><i class='fas fa-graduation-cap' aria-hidden="true"></i></span><b> B.Sc. in Biology </b>
+    <span style="float:right;">2006-209</span>
+    <br>
+    <em> Université du Québec à Rimouski </em>
+    <span style="float:right;">Rimouski, QC, CA</span>
+    <br>
+
+</ul>
+
+<br> 
+
+## {{< fa scroll >}} Publications
+
+::: {#refs-publications}
+:::
+
+<br> 
+
+## {{< fa book-open >}} Book chapters
+
+
+::: {#refs-book}
+:::
+
+<br> 
+
+## {{< fa file-alt >}} Technical reports 
+
+::: {#refs-technical}
+:::
+ 
+<br> 
+
+## {{< fa users >}} Seminars & conferences
+
+::: {#refs-seminars}
+:::
+
+<br> 
+
+## {{< fa images >}} Posters
+
+::: {#refs-posters}
+:::

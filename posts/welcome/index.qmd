@@ -1,0 +1,20 @@
+---
+title: "Welcome To My Blog"
+author: "David Beauchesne"
+date: "2024-03-28"
+categories: [news]
+---
+
+![](thumbnail.jpg)
+
+This is the first post in a Quarto blog. Welcome!
+
+I recently decided to finally build my own website, including a blog, after many failed attempts throughout the years. My typical workflow has been to initiate a website with a tool I did not have time to fully commit to, then proceed to lose interest and whatever expertise I gleaned from using the chosen tool. Of course, I focused on the format rather than the content, so I kept being left with nothing functional to work with. Lather, rinse, repeat. 
+
+This time around, I had an incentive to switch from using [RMarkdown](https://rmarkdown.rstudio.com/) to [Quarto](https://quarto.org/), a move we agreed upon in the startup I co-founded, [*inSileco*](https://insileco.io/). Quarto is (so far) amazingly simple and straightforward to use to build websites, so I figured that I might as well take the opportunity to build my own website with a tool that I know I will be using for the foreseeable future. 
+
+As a nod to Quarto, I decided to directly use their template for the first blog post "Welcome To My Blog". 
+
+Welcome to my blog! 
+
+

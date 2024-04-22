@@ -1,0 +1,57 @@
+project:
+  type: website
+
+website:
+  title: "David Beauchesne"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: vitae.qmd
+        text: Vitae
+      - href: blog.qmd
+        text: Blog
+      - href: https://insileco.io/
+        text: inSileco Inc.
+      - href: https://blog.insileco.io/
+        text: inSileco blog
+      # - href: about.qmd
+      #   text: About
+    right:
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+      - icon: rss
+        href: index.xml
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+
+# Use the multibib extension
+filters:
+  - multibib
+  # - bold-auth-name.lua
+
+# bold-auth-name:
+  # - family: Beauchesne
+    # given: David
+
+# Turn off YAML validation
+validate-yaml: false
+
+# Disable citeproc
+citeproc: false
+
+# Bibliographies
+bibliography:
+  main: data/main.bib
+  publications: data/publications.bib
+  seminars: data/seminars.bib
+  technical: data/technical.bib
+  book: data/book.bib
+  posters: data/posters.bib
+csl: website.csl

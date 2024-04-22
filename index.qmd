@@ -1,0 +1,70 @@
+---
+title: ""
+comments: False
+format:
+  html:
+    page-layout: full
+listing:
+  - id: blog-home
+    contents: 
+      - posts/
+      - series/
+    type: default
+    max-items: 6
+    grid-columns: 3
+    sort: 
+      - "date desc"
+      - "title asc"
+  - id: latest-home
+    contents: 
+      - series/main/
+    type: default
+    max-items: 6
+    sort: 
+      - "date desc"
+      - "title asc"
+about:
+  id: about-db
+  template: jolla
+  image: images/profile.jpg
+  image-shape: round
+back-to-top-navigation: false
+---
+
+:::{#about-db}
+
+  <center>
+  I am **David Beauchesne**, a postdoctoral fellow at the University of Toronto with 10+ years of experience on ecosystem-based management in general and cumulative effects assessment in particular, relying heavily on data science, reproducibility and sound data management practices.
+  
+  Find out more about me [here](vitae.qmd).
+
+
+  [{{< fa envelope size=xl >}}](mailto:david.beauchesne@insileco.io)
+  [{{< fa globe size=xl >}}](https://david.beauchesne.insileco.io)
+  [{{< fa brands github size=xl >}}](https://github.com/david-beauchesne)
+  [{{< fa brands orcid size=xl >}}](https://www.orcid.org/0000-0002-3590-8161)
+  <!-- [{{< fa brands google-scholar size=xl >}}](https://scholar.google.ca/citations?user=8YPeWfgAAAAJ&hl=en&oi=ao$$) -->
+  [{{< fa brands linkedin size=xl >}}](https://www.linkedin.com/in/david-beauchesne-16683353/)
+  [{{< fa brands researchgate size=xl >}}](https://www.researchgate.net/profile/David_Beauchesne)
+  </center>
+
+:::
+
+<hr>
+
+
+:::::{.grid}
+
+::::{.g-col-12 .g-col-md-6}
+## Latest
+:::{#latest-home}
+:::
+::::
+
+::::{.g-col-12 .g-col-md-6}
+## Blog
+:::{#blog-home}
+:::
+::::
+
+:::::
