@@ -57,4 +57,5 @@ bibliography:
   technical: data/technical.bib
   book: data/book.bib
   posters: data/posters.bib
+  cea: data/cea.bib
 csl: website.csl

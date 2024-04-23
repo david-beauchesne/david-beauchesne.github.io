@@ -1,0 +1,44 @@
+---
+title: "First things first: what are cumulative effects?"
+author: "David Beauchesne"
+date: "2024-04-23"
+categories: [cumulative effects]
+image: "eccc_cea.jpeg"
+---
+
+First things first: before we dive into the ins and outs of cumulative effects assessments, we must first establish what cumulative effects actually are. 
+
+The cumulative effects assessment (CEA) framework stems from natural resource management and environmental impact assessment (EIA) regulatory processes [@halpern2013]. These are integral to environmental management in many countries throughout the world. An environmental assessment is a process where potential harmful environmental effects of a proposed project are identified and lead to project acceptance, revision or rejection.
+
+As part of the environmental impact assessment process, cumulative effects assessments have been part of environmental legislation for decades in certain countries, including the United States (National Environmental Policy Act 40 CFR \S 1508.7, 1969), Canada (Canadian Environmental Assessment Act S.C. 1992, c. 37, now the [Impact Assessment Act 2019](https://laws-lois.justice.gc.ca/eng/acts/i-2.75/FullText.html) 22 (1)(a)(ii)), Australia, and various European countries [@halpern2013]. There is therefore a rich literature providing various definitions, guiding principles for assessments and best practice guides for assessment approaches [@peterson1987; @hegmann1999; @therivel2007; @krausman2011; @duinker2013].
+
+Now for some definitions. Unfortunately, there are no widely recognized definitions for cumulative effects [@duinker2013]. The Canadian Council of Ministers of the Environment [@conseilcanadiendesministresdelenvironnement2014] defines cumulative effects as *"changes in the environment caused by multiple interactions among human activities and natural processes that accumulate across space and time."* Put more colourfully, cumulative effects are often regarded as *"death by a thousand cuts"*. Environmental and Climate Change Canada published an elegant [video](https://www.youtube.com/watch?v=4kTq-hnrMHI) explaining cumulative effects in laymen’s terms:
+
+<br>
+
+{{< video https://www.youtube.com/watch?v=4kTq-hnrMHI >}}
+
+<br>
+
+Cumulative effects assessment, meanwhile, is defined as *"a systematic process of identifying, analyzing and evaluating cumulative effects"*. These definitions hint at a systems view of cumulative effects assessment and how it relates to an ecosystem-based management approach focusing on the structure of ecosystems as a whole [@christensen1996; @rosenberg2005; @leslie2007]. 
+
+From a policy, legislative, and regulatory standpoint, however, cumulative effects are defined more narrowly [@jones2016]. The 1992 Canadian Environmental Assessment Act defines cumulative effects as follows:
+
+> *“[...] the cumulative environmental effects [of a project] that are likely to result from the project in combination with other projects or activities”*.
+
+Assessments are thus usually undertaken at the scale of individual projects rather than through a systematic lens. There are opportunities and issues with this, which we will get into in other posts. For now, I will simply state that the main issue is that project-level assessments are hardly informative if the goal is to manage human activities in a broader context, such as a whole watershed, a province or the whole country. The project-level perspective is simply too narrow to be applicable to broader contexts. 
+
+Regional and systematic approaches to cumulative effects assessments are meant to address this issue and are gaining support [@dube2003; @duinker2006; @jones2016; @sinclair2017]. A regional cumulative effects assessment can be defined as follows [@sinclair2017]:
+
+> *”[A Regional Effects Assessment (REA)] is an [environmental assessment] whose primary or sole defining feature is its regional scope and its focus on understanding the interactions between human activities and the natural world. This means that in just about all aspects other than its spatial limitations, a REA should be comprehensive and integrated.”*
+
+The focus of regional and strategic approaches is broad and emphasize the interconnectedness of environmental, cultural and social components of an ecosystem, which is in sharp contrast to a project-scale approach to CEA. Regional assessments tend to focus on the total effects and viability of environmental receptors of interest, commonly referred to as valued components [@beanlands1983; @sinclair2017]. Current examples in Canada include the Regional Assessments of the [Ring of Fire](https://www.google.com/url?q=https://iaac-aeic.gc.ca/050/evaluations/proj/80468&sa=D&source=docs&ust=1713888899672807&usg=AOvVaw2AYwe-SV1E6vvBw4O1TV47) Area in Ontario and the [St. Lawrence River](https://www.google.com/url?q=https://iaac-aeic.gc.ca/050/evaluations/proj/80913&sa=D&source=docs&ust=1713888899672573&usg=AOvVaw31zwdHMUKDV35lf1k3vg6f) Area in Québec. Still, several constraints limit the practical application of regional assessments, especially access to quality data to establish the effects of one or more stressors on a valued component, and the process is far from perfect.
+
+This post serves as a short and simple primer to cumulative effects assessments to get us kickstarted into this series. Other posts will provide more details into these approaches as well as their strengths and weaknesses. For now, consider yourselves kickstarted! 
+
+<br> 
+
+#### References
+
+::: {#refs-cea}
+:::
