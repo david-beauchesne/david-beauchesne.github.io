@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="David Beauchesne">
-<meta name="dcterms.date" content="2024-03-28">
+<meta name="dcterms.date" content="2024-04-23">
 
 <title>David Beauchesne - First things first: what are cumulative effects?</title>
 <style>
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 1em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -158,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 28, 2024</p>
+        <p class="date">April 23, 2024</p>
       </div>
     </div>
     
@@ -179,12 +199,74 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Before we get into cumulative effects assessments, we must first establish what are cumulative effects. It may seem straightforward, but it really depends on who you are talking to. Let’s dive into this a little.</p>
+<p>First things first: before we dive into the ins and outs of cumulative effects assessments, we must first establish what cumulative effects actually are.</p>
+<p>The cumulative effects assessment (CEA) framework stems from natural resource management and environmental impact assessment (EIA) regulatory processes<span class="citation" data-cites="halpern2013"><sup><a href="#ref-halpern2013" role="doc-biblioref">8</a></sup></span>. These are integral to environmental management in many countries throughout the world. An environmental assessment is a process where potential harmful environmental effects of a proposed project are identified and lead to project acceptance, revision or rejection.</p>
+<p>As part of the environmental impact assessment process, cumulative effects assessments have been part of environmental legislation for decades in certain countries, including the United States (National Environmental Policy Act 40 CFR 1508.7, 1969), Canada (Canadian Environmental Assessment Act S.C. 1992, c.&nbsp;37, now the <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.75/FullText.html">Impact Assessment Act 2019</a> 22 (1)(a)(ii)), Australia, and various European countries<span class="citation" data-cites="halpern2013"><sup><a href="#ref-halpern2013" role="doc-biblioref">8</a></sup></span>. There is therefore a rich literature providing various definitions, guiding principles for assessments and best practice guides for assessment approaches<span class="citation" data-cites="peterson1987 hegmann1999 therivel2007 krausman2011 duinker2013"><sup><a href="#ref-krausman2011" role="doc-biblioref">2</a>,<a href="#ref-peterson1987" role="doc-biblioref">3</a>,<a href="#ref-duinker2013" role="doc-biblioref">7</a>,<a href="#ref-therivel2007" role="doc-biblioref">10</a>,<a href="#ref-hegmann1999" role="doc-biblioref">14</a></sup></span>.</p>
+<p>Now for some definitions. Unfortunately, there are no widely recognized definitions for cumulative effects<span class="citation" data-cites="duinker2013"><sup><a href="#ref-duinker2013" role="doc-biblioref">7</a></sup></span>. The Canadian Council of Ministers of the Environment<span class="citation" data-cites="conseilcanadiendesministresdelenvironnement2014"><sup><a href="#ref-conseilcanadiendesministresdelenvironnement2014" role="doc-biblioref">6</a></sup></span> defines cumulative effects as <em>“changes in the environment caused by multiple interactions among human activities and natural processes that accumulate across space and time.”</em> Put more colourfully, cumulative effects are often regarded as <em>“death by a thousand cuts”</em>. Environmental and Climate Change Canada published an elegant <a href="https://www.youtube.com/watch?v=4kTq-hnrMHI">video</a> explaining cumulative effects in laymen’s terms:</p>
+<p><br></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/4kTq-hnrMHI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><br></p>
+<p>Cumulative effects assessment, meanwhile, is defined as <em>“a systematic process of identifying, analyzing and evaluating cumulative effects”</em>. These definitions hint at a systems view of cumulative effects assessment and how it relates to an ecosystem-based management approach focusing on the structure of ecosystems as a whole<span class="citation" data-cites="christensen1996 rosenberg2005 leslie2007"><sup><a href="#ref-leslie2007" role="doc-biblioref">9</a>,<a href="#ref-rosenberg2005" role="doc-biblioref">12</a>,<a href="#ref-christensen1996" role="doc-biblioref">15</a></sup></span>.</p>
+<p>From a policy, legislative, and regulatory standpoint, however, cumulative effects are defined more narrowly<span class="citation" data-cites="jones2016"><sup><a href="#ref-jones2016" role="doc-biblioref">5</a></sup></span>. The 1992 Canadian Environmental Assessment Act defines cumulative effects as follows:</p>
+<blockquote class="blockquote">
+<p><em>“[…] the cumulative environmental effects [of a project] that are likely to result from the project in combination with other projects or activities”</em>.</p>
+</blockquote>
+<p>Assessments are thus usually undertaken at the scale of individual projects rather than through a systematic lens. There are opportunities and issues with this, which we will get into in other posts. For now, I will simply state that the main issue is that project-level assessments are hardly informative if the goal is to manage human activities in a broader context, such as a whole watershed, a province or the whole country. The project-level perspective is simply too narrow to be applicable to broader contexts.</p>
+<p>Regional and systematic approaches to cumulative effects assessments are meant to address this issue and are gaining support<span class="citation" data-cites="dube2003 duinker2006 jones2016 sinclair2017"><sup><a href="#ref-sinclair2017" role="doc-biblioref">4</a>,<a href="#ref-jones2016" role="doc-biblioref">5</a>,<a href="#ref-duinker2006" role="doc-biblioref">11</a>,<a href="#ref-dube2003" role="doc-biblioref">13</a></sup></span>. A regional cumulative effects assessment can be defined as follows<span class="citation" data-cites="sinclair2017"><sup><a href="#ref-sinclair2017" role="doc-biblioref">4</a></sup></span>:</p>
+<blockquote class="blockquote">
+<p><em>”[A Regional Effects Assessment (REA)] is an [environmental assessment] whose primary or sole defining feature is its regional scope and its focus on understanding the interactions between human activities and the natural world. This means that in just about all aspects other than its spatial limitations, a REA should be comprehensive and integrated.”</em></p>
+</blockquote>
+<p>The focus of regional and strategic approaches is broad and emphasize the interconnectedness of environmental, cultural and social components of an ecosystem, which is in sharp contrast to a project-scale approach to CEA. Regional assessments tend to focus on the total effects and viability of environmental receptors of interest, commonly referred to as valued components<span class="citation" data-cites="beanlands1983 sinclair2017"><sup><a href="#ref-beanlands1983" role="doc-biblioref">1</a>,<a href="#ref-sinclair2017" role="doc-biblioref">4</a></sup></span>. Current examples in Canada include the Regional Assessments of the <a href="https://www.google.com/url?q=https://iaac-aeic.gc.ca/050/evaluations/proj/80468&amp;sa=D&amp;source=docs&amp;ust=1713888899672807&amp;usg=AOvVaw2AYwe-SV1E6vvBw4O1TV47">Ring of Fire</a> Area in Ontario and the <a href="https://www.google.com/url?q=https://iaac-aeic.gc.ca/050/evaluations/proj/80913&amp;sa=D&amp;source=docs&amp;ust=1713888899672573&amp;usg=AOvVaw31zwdHMUKDV35lf1k3vg6f">St.&nbsp;Lawrence River</a> Area in Québec. Still, several constraints limit the practical application of regional assessments, especially access to quality data to establish the effects of one or more stressors on a valued component, and the process is far from perfect.</p>
+<p>This post serves as a short and simple primer to cumulative effects assessments to get us kickstarted into this series. Other posts will provide more details into these approaches as well as their strengths and weaknesses. For now, consider yourselves kickstarted!</p>
 <p><br></p>
 <section id="references" class="level4">
 <h4 class="anchored" data-anchor-id="references">References</h4>
-<div id="refs-main">
-
+<div id="refs-cea" class="references csl-bib-body" data-entry-spacing="1" data-line-spacing="2" role="list">
+<div id="ref-beanlands1983" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Beanlands, G. E. &amp; Duinker, P. N. <em>An Ecological Framework for Environmental Impact Assessment in <span>Canada</span></em>. (<span>Institute for Resource and Environmental Studies, Dalhousie University and …</span>, 1983).</div>
+</div>
+<div id="ref-krausman2011" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Krausman, P. R. &amp; Harris, L. K. <em>Cumulative Effects in Wildlife Management : Impact Mitigation</em>. (CRC Press, Boca Raton, Fla, 2011).</div>
+</div>
+<div id="ref-peterson1987" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Peterson, E. B., Chan, Y. H., Peterson, N. M., Constable, G. A., Caton, R. B., Davis, C. S., Wallace, R. R. &amp; Yarranton, G. A. <em>Cumulative Effects Assessment in <span>Canada</span>: <span>An</span> Agenda for Action and Research</em>. (Canadian Environmental Assessment Research Council Hull, 1987).</div>
+</div>
+<div id="ref-sinclair2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Sinclair, A. J., Doelle, M. &amp; Duinker, P. N. <a href="https://doi.org/10.1016/j.eiar.2016.04.007">Looking up, down, and sideways: <span>Reconceiving</span> cumulative effects assessment as a mindset</a>. <em>Environmental Impact Assessment Review</em> <strong>62</strong>, 183–194 (2017).</div>
+</div>
+<div id="ref-jones2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Jones, F. C. <a href="https://doi.org/10.1139/er-2015-0073">Cumulative effects assessment: Theoretical underpinnings and big problems</a>. <em>Environ. Rev.</em> <strong>24</strong>, 187–204 (2016).</div>
+</div>
+<div id="ref-conseilcanadiendesministresdelenvironnement2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">l’environnement, C. canadien des ministres de. Définitions et principes pancanadiens pour les effets cumulatifs. 2 (2014).</div>
+</div>
+<div id="ref-duinker2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Duinker, P. N., Burbidge, E. L., Boardley, S. R. &amp; Greig, L. A. <a href="https://doi.org/10.1139/er-2012-0035">Scientific dimensions of cumulative effects assessment: Toward improvements in guidance for practice</a>. <em>Environ. Rev.</em> <strong>21</strong>, 40–52 (2013).</div>
+</div>
+<div id="ref-halpern2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Halpern, B. S. &amp; Fujita, R. <a href="https://doi.org/10.1890/ES13-00181.1">Assumptions, challenges, and future directions in cumulative impact analysis</a>. <em>Ecosphere</em> <strong>4</strong>, art131 (2013).</div>
+</div>
+<div id="ref-leslie2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Leslie, H. M. &amp; McLeod, K. L. <a href="https://doi.org/10.1890/060093">Confronting the challenges of implementing marine ecosystem-based management</a>. <em>Frontiers in Ecology and the Environment</em> <strong>5</strong>, 540–548 (2007).</div>
+</div>
+<div id="ref-therivel2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Therivel, R. &amp; Ross, B. <a href="https://doi.org/10.1016/j.eiar.2007.02.001">Cumulative effects assessment: <span>Does</span> scale matter?</a> <em>Environmental Impact Assessment Review</em> <strong>27</strong>, 365–385 (2007).</div>
+</div>
+<div id="ref-duinker2006" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Duinker, P. N. &amp; Greig, L. A. <a href="https://doi.org/10.1007/s00267-004-0240-5">The <span>Impotence</span> of <span>Cumulative Effects Assessment</span> in <span>Canada</span>: <span>Ailments</span> and <span>Ideas</span> for <span>Redeployment</span></a>. <em>Environmental Management</em> <strong>37</strong>, 153–161 (2006).</div>
+</div>
+<div id="ref-rosenberg2005" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Rosenberg, A. A. &amp; McLeod, K. L. <a href="https://www.jstor.org/stable/24869751">Implementing ecosystem-based approaches to management for the conservation of ecosystem services</a>. <em>Marine Ecology Progress Series</em> <strong>300</strong>, 270–274 (2005).</div>
+</div>
+<div id="ref-dube2003" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Dubé, M. G. <a href="https://doi.org/10.1016/S0195-9255(03)00113-6">Cumulative effect assessment in <span>Canada</span>: A regional framework for aquatic ecosystems</a>. <em>Environmental Impact Assessment Review</em> <strong>23</strong>, 723–745 (2003).</div>
+</div>
+<div id="ref-hegmann1999" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Hegmann, G., Cocklin, C., Creasey, R., Dupuis, S., Kennedy, A., Kingsley, L., Ross, W., Spaling, H. &amp; Stalker, D. <em>Cumulative Effects Assessment Practitioner’s Guide. <span>Prepared</span> by <span>AXYS Environmental Consulting Ltd</span>. And the <span>CEA Working Group</span> for the <span>Canadian Environmental Assessment Agency</span>, <span>Hull</span>, <span>Quebec</span>.</em> (1999).</div>
+</div>
+<div id="ref-christensen1996" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Christensen, N. L., Bartuska, A. M., Brown, J. H., Carpenter, S., D’Antonio, C., Francis, R., Franklin, J. F., MacMahon, J. A., Noss, R. F., Parsons, D. J., Peterson, C. H., Turner, M. G. &amp; Woodmansee, R. G. <a href="https://doi.org/10.2307/2269460">The <span>Report</span> of the <span>Ecological Society</span> of <span>America Committee</span> on the <span>Scientific Basis</span> for <span>Ecosystem Management</span></a>. <em>Ecological Applications</em> <strong>6</strong>, 665–691 (1996).</div>
+</div>
 </div>
 
 

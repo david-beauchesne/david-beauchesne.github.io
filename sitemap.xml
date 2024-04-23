@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://david-beauchesne.github.io/series/posts/cumulative_effects/what_cea/index.html</loc>
+    <lastmod>2024-04-23T16:05:47.667Z</lastmod>
+  </url>
+  <url>
     <loc>https://david-beauchesne.github.io/series/main/cumulative_effects/index.html</loc>
-    <lastmod>2024-04-23T13:06:08.380Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.663Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/blog.html</loc>
-    <lastmod>2024-04-23T13:06:08.380Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.663Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/about.html</loc>
-    <lastmod>2024-04-23T13:06:08.380Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.663Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/vitae.html</loc>
-    <lastmod>2024-04-23T13:06:08.384Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.667Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/posts/welcome/index.html</loc>
-    <lastmod>2024-04-23T13:06:08.380Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.663Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/index.html</loc>
-    <lastmod>2024-04-23T13:06:08.380Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.663Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/series/posts/cumulative_effects/welcome/index.html</loc>
-    <lastmod>2024-04-23T13:06:08.384Z</lastmod>
+    <lastmod>2024-04-23T16:05:47.667Z</lastmod>
   </url>
 </urlset>
