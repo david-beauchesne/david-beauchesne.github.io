@@ -127,11 +127,6 @@ When I began looking at the extracted articles, I noticed keywords such as *phth
 #| label: data_cleanup
 # Get data
 lit <- bib2df::bib2df("cea_search.bib", separate_names = TRUE, merge_lines = TRUE) |>
-  # lit <- bib2df::bib2df(
-  #   "series/posts/cumulative_effects/review_scientific_literature/cea_search.bib",
-  #   separate_names = TRUE,
-  #   merge_lines = TRUE
-  # ) |>
   dplyr::mutate(uid = dplyr::row_number())
 
 # Terms identify articles to remove
@@ -163,6 +158,7 @@ uid <- lapply(rem, function(x) {
 
 # Update literature list
 lit <- lit[-uid, ]
+# bib2df::df2bib(lit, file = "cea_search_filtered.bib")
 ```
 
 # The results
@@ -590,11 +586,3 @@ echarts4r::e_charts() |>
   echarts4r::e_graph_edges(edges, source, target, value, size) |>
   echarts4r::e_tooltip()
 ```
-
-
-<br>
-
-#### References
-
-::: {#refs-cea}
-::: 
