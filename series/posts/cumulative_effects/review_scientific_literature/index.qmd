@@ -511,6 +511,129 @@ echarts4r::e_charts() |>
 ```
 
 
+### Expressions
+
+Finally, let's go beyond unigrams and bigrams and try to work up a collection of relevant expressions arising from the corpus of recurring expressions in the cumulative effects asssessment literature. After a little exploration, I realized that there are some trigrams such as *ecosystem-based management* and *marine spatial planning*. These are obviously not captured in the unigrams and bigrams, on top of influencing the results of those analyses. To address this, I decided to redo the analysis by evaluating trigrams, bigrams and unigrams while sequentially removing the most prevalent expressions from the abstracts. The results, while still imperfect, are more representative of the literature. 
+
+```{r}
+#| label: fig-expressions
+#| fig-cap: 'Graph of the relationships between the most frequent expressions words in the title and abstracts of articles focused on cumulative effects assessment'
+#| fig-width: 10
+#| fig-height: 10
+ngram <- function(txt, n) {
+  rem <- c(
+    tidytext::stop_words$word,
+    "na", "reserved", "elsevier" # ,
+    # "environmental", "cumulative",
+    # "effects", "effect", "impacts", "impact",
+    # "risks", "risk", "assessments", "assessment"
+  )
+  txt |>
+    tidytext::unnest_tokens(word, text, token = "ngrams", n = n) |>
+    tidyr::separate(word, glue::glue("word{1:n}"), sep = " ") |>
+    dplyr::filter(!dplyr::if_any(dplyr::starts_with("word"), ~ . %in% rem)) |>
+    tidyr::unite(word, dplyr::starts_with("word"), sep = " ") |>
+    dplyr::distinct() |>
+    dplyr::group_by(word) |>
+    dplyr::mutate(count = dplyr::n()) |>
+    dplyr::ungroup()
+}
+
+update_abstracts <- function(abstracts, rem) {
+  rem <- tolower(rem)
+  for (i in seq_len(length(rem))) {
+    abstracts <- abstracts |>
+      dplyr::mutate(text = stringr::str_replace_all(text, rem[i], " "))
+  }
+  abstracts
+}
+
+abstracts <- lit |>
+  dplyr::mutate(
+    text = glue::glue("{TITLE}; {ABSTRACT}"),
+    text = tolower(text),
+    text = stringr::str_replace_all(text, "-", " "),
+    text = stringr::str_replace_all(text, "maritime", "marine")
+  ) |>
+  dplyr::select(uid, text)
+
+# Trigrams
+trigram <- ngram(abstracts, 3)
+rem <- trigram |>
+  dplyr::select(-uid) |>
+  dplyr::distinct() |>
+  dplyr::arrange(dplyr::desc(count)) |>
+  dplyr::filter(count > 3)
+trigram <- dplyr::filter(trigram, word %in% rem$word) |>
+  dplyr::mutate(count = count / max(count))
+abstracts <- update_abstracts(abstracts, rem$word)
+
+# Bigrams
+bigram <- ngram(abstracts, 2)
+rem <- bigram |>
+  dplyr::select(-uid) |>
+  dplyr::distinct() |>
+  dplyr::arrange(dplyr::desc(count)) |>
+  dplyr::filter(count > 6)
+bigram <- dplyr::filter(bigram, word %in% rem$word) |>
+  dplyr::mutate(count = count / max(count))
+abstracts <- update_abstracts(abstracts, rem$word)
+
+# Unigrams
+unigram <- ngram(abstracts, 1)
+rem <- unigram |>
+  dplyr::select(-uid) |>
+  dplyr::distinct() |>
+  dplyr::arrange(dplyr::desc(count)) |>
+  dplyr::filter(count > 70)
+unigram <- dplyr::filter(unigram, word %in% rem$word) |>
+  dplyr::mutate(count = count / max(count))
+
+
+# Correlations
+words <- dplyr::bind_rows(trigram, bigram, unigram) |>
+  dplyr::filter(!word %in% c("results suggest", "resource management", "results", "study")) |> # Manual changes
+  dplyr::group_by(uid, word) |>
+  dplyr::summarize(count = sum(count)) |>
+  dplyr::ungroup()
+pair_cor <- widyr::pairwise_cor(words, word, uid, sort = TRUE, upper = FALSE) |>
+  dplyr::filter(abs(correlation) > .2)
+
+# Layout
+lay <- pair_cor |>
+  dplyr::select(from = item1, to = item2, correlation) |>
+  tidygraph::as_tbl_graph(directed = FALSE) |>
+  ggraph::create_layout(layout = "centrality", centrality = tidygraph::centrality_degree()) |>
+  dplyr::select(name, x, y)
+
+# Nodes
+nodes <- words |>
+  dplyr::select(name = word, value = count) |>
+  dplyr::distinct() |>
+  dplyr::mutate(
+    size = value * 40
+  ) |>
+  dplyr::left_join(lay, by = "name") |>
+  tidyr::drop_na()
+
+# Edges
+edges <- pair_cor |>
+  dplyr::select(source = item1, target = item2, value = correlation) |>
+  dplyr::mutate(size = value * 5)
+
+# Graph
+echarts4r::e_charts() |>
+  echarts4r::e_graph(
+    layout = "none",
+    label = list(show = TRUE, position = "right"),
+    lineStyle = list(curveness = 0.3, color = "source"),
+    labelLayout = list(hideOverlap = TRUE)
+  ) |>
+  echarts4r::e_graph_nodes(nodes, name, value, size, xpos = x, ypos = y) |>
+  echarts4r::e_graph_edges(edges, source, target, value, size) |>
+  echarts4r::e_tooltip()
+```
+
 
 ## Authors
 
