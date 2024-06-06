@@ -1,0 +1,189 @@
+---
+title: "An exploration of COVID-19 outcomes throuth time in Canada"
+author: "David Beauchesne & Robert Moriarity"
+date: "2024-05-28"
+categories: [health, COVID-19]
+image: "covid.jpg"
+draft: false
+execute:
+  warning: false
+format:
+  html:
+    code-fold: true
+    code-summary: "<i><b>Code</b></i>"
+---
+
+```{r}
+#| label: setup
+library(vroom)
+library(dplyr)
+library(glue)
+library(lubridate)
+library(echarts4r)
+```
+
+Part of my postdoctoral work at the University of Toronto has put me in touch with environmental health scientists during the pandemic, one of them being an old friend, [Robert Moriarity](https://www.torontomu.ca/occupational-public-health/about/people/faculty/rob-moriarity/). We met during our respective master's at Concordia University in Montreal and always thought that combining our respective expertises would be highly relevant. Rob is now an assistant professor at the School of Occupational and Public Health at the Toronto Metropolitan University. 
+
+The goal of our collaboration on my end was to begin incorporating health, social and cultural elements to cumulative effects assessments, but COVID-19 was at the forefront of many of our discussions. As such, I explored some datasets describing COVID-19 outcomes that were available in Canada and a few projects were developped from there. For this particular post, we wish to present two specific datasets and explore the variations of COVID-19 through time in Canada.
+
+<br> 
+
+## COVID-19 data
+
+### Outcomes
+
+The Timeline of COVID-19 in Canada initiative [@berry2021] provides daily COVID-19 outcome metrics (e.g. deaths, cases, hospitalizations, and tests completed) at the national, provincial/territorial, and health region scales. Here, we used the finer scale spatial data at the health region-level for which daily number of cases and deaths are available for 99 health regions across the country ant limit the temporal window of our exploration to the onset of the pandemic (2020-01-01) to the onset of the Omicron variant (2022-03-11), as it coincides with certain Canadian provinces phasing out reporting at the level of health regions and with the advent of rapid testing.
+
+Let us begin by downloading and filtering the data from the [GitHub repository](https://github.com/ccodwg/CovidTimelineCanada/) where they are stored.
+
+```{r}
+#| label: covidtimeline
+#| tbl-cap: Summary table of the number of health regions, the population size and the number of COVID-19 outcomes (*i.e.* cases and deaths) in Canadian provinces and territories between 2020-01-01 and 2022-03-11.
+# Get data
+hr <- vroom::vroom("https://github.com/ccodwg/CovidTimelineCanada/raw/main/geo/hr.csv")
+path <- "https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/data/hr/"
+covid <- dplyr::bind_rows(
+  vroom::vroom(glue::glue("{path}cases_hr.csv")),
+  vroom::vroom(glue::glue("{path}deaths_hr.csv"))
+) |>
+  filter(date <= as.Date("2022-03-11")) |>
+  filter(sub_region_1 != 9999)
+
+# Create summary table
+dat <- hr |>
+  dplyr::group_by(region) |>
+  dplyr::summarise(
+    region_num = dplyr::n(),
+    population = sum(pop, na.rm = TRUE)
+  )
+
+covid |>
+  dplyr::group_by(name, region) |>
+  dplyr::summarize(value_daily = sum(value_daily)) |>
+  tidyr::pivot_wider(names_from = name, values_from = value_daily) |>
+  dplyr::left_join(dat, by = "region") |>
+  dplyr::select(region, region_num, population, cases, deaths) |>
+  knitr::kable(
+    col.names = c("Province", "Health regions", "Population", "Cases", "Deaths"),
+    row.names = FALSE,
+  )
+```
+
+### Mandates
+
+We will couple the outcome data with a [timeline of federal, provincial and territorial government interventions during the COVID-19 pandemic](https://www.cihi.ca/en/canadian-covid-19-intervention-timeline) (*e.g.* lockdowns and mask mandates) from the Canadian Institute of Health Information. 
+
+
+Canadian Institute for Health Information. Canadian COVID-19 Intervention Timeline — Data Tables. Ottawa, ON: CIHI; October 13, 2022. 
+
+```{r}
+#| label: mandates
+#| tbl-cap:
+curl::curl_download(
+  "https://www.cihi.ca/sites/default/files/document/aoda-covid-19-intervention-timeline-in-canada-en.xlsx",
+  "mandates.xlsx"
+)
+mandates <- readxl::read_xlsx("mandates.xlsx", sheet = 3, skip = 2) |>
+  janitor::clean_names() |>
+  filter(entry_id != "End of worksheet") |>
+  mutate(intervention_category = case_when(
+    intervention_category == "\r\nDistancing" ~ "Distancing",
+    .default = intervention_category
+  )) |>
+  mutate(jurisdiction = case_when(
+    jurisdiction == "Alta." ~ "AB",
+    jurisdiction == "B.C." ~ "BC",
+    jurisdiction == "Can." ~ "Canada",
+    jurisdiction == "Man." ~ "MB",
+    jurisdiction == "N.B." ~ "NB",
+    jurisdiction == "N.L." ~ "NL",
+    jurisdiction == "N.S." ~ "NS",
+    jurisdiction == "N.W.T." ~ "NT",
+    jurisdiction == "Nun." ~ "NU",
+    jurisdiction == "Ont." ~ "ON",
+    jurisdiction == "P.E.I." ~ "PE",
+    jurisdiction == "Que." ~ "QC",
+    jurisdiction == "Sask." ~ "SK",
+    jurisdiction == "Y.T." ~ "YT"
+  )) |>
+  arrange(jurisdiction, start_date)
+
+mandates |>
+  group_by(intervention_category, jurisdiction) |>
+  summarize(number = n()) |>
+  tidyr::pivot_wider(names_from = jurisdiction, values_from = number) |>
+  rename(`Intervention category` = intervention_category) |>
+  knitr::kable()
+```
+
+## Temporal exploration
+
+Let us first explore the temporal trends in covid outcomes through time. Let's begin by looking at weekly cumulative outcomes per 100 000 habitants in each health region. 
+
+```{r}
+#| label: case_timelines
+dat <- covid |>
+  mutate(
+    week = lubridate::week(date),
+    year = lubridate::year(date),
+    date = ymd(glue("{year}0101")) + weeks(week - 1)
+  ) |>
+  left_join(hr[, c("hruid", "pop")], by = c("sub_region_1" = "hruid")) |>
+  group_by(date, region, sub_region_1, name, pop) |>
+  summarize(value_weekly = sum(value_daily)) |>
+  ungroup() |>
+  mutate(outcomes_per_100000 = (value_weekly / pop) * 100000) |>
+  arrange(name, region, sub_region_1, date) |>
+  select(-pop, value_weekly)
+
+man <- mandates |>
+  arrange(jurisdiction) |>
+  group_by(jurisdiction)
+
+
+# purrr::imap(function(j,k) {
+
+# })
+
+# Chart
+x <- dat |>
+  filter(name == "cases") |>
+  group_by(region) |>
+  group_split() |>
+  lapply(function(j) {
+    j |>
+      group_by(sub_region_1) |>
+      e_charts(date) |>
+      e_title("Province / territory", j$region[1]) |>
+      e_line(outcomes_per_100000, smooth = TRUE) |>
+      e_tooltip(trigger = "axis")
+  })
+do.call(e_arrange, x)
+```
+
+```{r}
+#| label: death_timelines
+# Chart
+x <- dat |>
+  filter(name == "deaths") |>
+  group_by(region) |>
+  group_split() |>
+  lapply(function(j) {
+    j |>
+      group_by(sub_region_1) |>
+      e_charts(date) |>
+      e_title("Province / territory", j$region[1]) |>
+      e_line(outcomes_per_100000, smooth = TRUE) |>
+      e_tooltip(trigger = "axis")
+  })
+do.call(e_arrange, x)
+```
+
+
+
+<br> 
+
+#### References
+
+::: {#refs-main}
+:::
