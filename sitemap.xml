@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://david-beauchesne.github.io/series/main/cumulative_effects/index.html</loc>
+    <lastmod>2024-06-06T17:03:25.193Z</lastmod>
+  </url>
+  <url>
     <loc>https://david-beauchesne.github.io/series/posts/cumulative_effects/what_are_cumulative_effects/index.html</loc>
-    <lastmod>2024-05-06T14:21:55.988Z</lastmod>
-  </url>
-  <url>
-    <loc>https://david-beauchesne.github.io/series/posts/cumulative_effects/review_scientific_literature/index.html</loc>
-    <lastmod>2024-05-06T14:21:55.984Z</lastmod>
-  </url>
-  <url>
-    <loc>https://david-beauchesne.github.io/index.html</loc>
-    <lastmod>2024-05-06T14:21:55.976Z</lastmod>
+    <lastmod>2024-06-06T17:03:25.209Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/posts/welcome/index.html</loc>
-    <lastmod>2024-05-06T14:21:55.976Z</lastmod>
+    <lastmod>2024-06-06T17:03:25.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://david-beauchesne.github.io/index.html</loc>
+    <lastmod>2024-06-06T17:03:25.157Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/vitae.html</loc>
-    <lastmod>2024-05-06T14:21:55.988Z</lastmod>
+    <lastmod>2024-06-06T17:03:25.209Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/about.html</loc>
-    <lastmod>2024-05-06T14:21:55.972Z</lastmod>
+    <lastmod>2024-06-06T17:03:25.153Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/blog.html</loc>
-    <lastmod>2024-05-06T14:21:55.972Z</lastmod>
+    <lastmod>2024-06-06T17:03:25.153Z</lastmod>
   </url>
   <url>
-    <loc>https://david-beauchesne.github.io/series/main/cumulative_effects/index.html</loc>
-    <lastmod>2024-05-06T14:21:55.976Z</lastmod>
+    <loc>https://david-beauchesne.github.io/posts/covid_timeline/index.html</loc>
+    <lastmod>2024-06-06T17:03:25.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://david-beauchesne.github.io/series/posts/cumulative_effects/review_scientific_literature/index.html</loc>
+    <lastmod>2024-06-06T17:03:25.205Z</lastmod>
   </url>
   <url>
     <loc>https://david-beauchesne.github.io/series/posts/cumulative_effects/welcome/index.html</loc>
-    <lastmod>2024-05-06T14:21:55.984Z</lastmod>
+    <lastmod>2024-06-06T17:03:25.205Z</lastmod>
   </url>
 </urlset>
