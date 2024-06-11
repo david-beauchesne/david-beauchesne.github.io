@@ -32,7 +32,7 @@ The goal of our collaboration on my end was to begin incorporating health, socia
 
 ### Outcomes
 
-The Timeline of COVID-19 in Canada initiative [@berry2021] provides daily COVID-19 outcome metrics (e.g. deaths, cases, hospitalizations, and tests completed) at the national, provincial/territorial, and health region scales. Here, we used the finer scale spatial data at the health region-level for which daily number of cases and deaths are available for 99 health regions across the country ant limit the temporal window of our exploration to the onset of the pandemic (2020-01-01) to the onset of the Omicron variant (2022-03-11), as it coincides with certain Canadian provinces phasing out reporting at the level of health regions and with the advent of rapid testing.
+The Timeline of COVID-19 in Canada initiative [@berry2021] provides daily COVID-19 outcome metrics (e.g. deaths, cases, hospitalizations, and tests completed) at the national, provincial/territorial, and health region scales. Here, we used the finer scale spatial data at the health region-level for which daily number of cases and deaths are available for 99 health regions across the country. We limited the temporal window of our exploration to the onset of the pandemic (2020-01-01) to the onset of the Omicron variant (2022-03-11), as it coincides with certain Canadian provinces phasing out reporting at the level of health regions and with the advent of rapid testing, which decreased case reporting throughout the country.
 
 Let us begin by downloading and filtering the data from the [GitHub repository](https://github.com/ccodwg/CovidTimelineCanada/) where they are stored.
 
@@ -71,14 +71,13 @@ covid |>
 
 ### Mandates
 
-We will couple the outcome data with a [timeline of federal, provincial and territorial government interventions during the COVID-19 pandemic](https://www.cihi.ca/en/canadian-covid-19-intervention-timeline) (*e.g.* lockdowns and mask mandates) from the Canadian Institute of Health Information. 
+Along with cumulative outcomes, we wish to look at the timing of certain types of regulatory interventions that were instated during the pandemic to curb the rates of outcomes (*e.g.* lockdowns and mask mandates). We used data from the Canadian Institute for Health Information detailing the [timeline of federal, provincial and territorial government interventions during the COVID-19 pandemic](https://www.cihi.ca/en/canadian-covid-19-intervention-timeline) [@cihi2022]. 
 
-Canadian Institute for Health Information. Canadian COVID-19 Intervention Timeline — Data Tables. Ottawa, ON: CIHI; October 13, 2022. 
 
 
 ```{r}
 #| label: mandates
-#| tbl-cap:
+#| tbl-cap: Summary of the number of categories of interventions implemented by the Canadian and provincial/territorial governments throughout the pandemic.
 curl::curl_download(
   "https://www.cihi.ca/sites/default/files/document/aoda-covid-19-intervention-timeline-in-canada-en.xlsx",
   "mandates.xlsx"
@@ -116,9 +115,34 @@ mandates |>
   knitr::kable()
 ```
 
+We filtered the intervention types to only consider those that have a direct influence on the behaviour of individuals, such as closures, limitations on gatherings, social distancing, mask mandates and travel restrictions. This filtering process yielded a total of 52 mandates with beginning and end dates.
+
+```{r}
+# label: mandates-filtering
+#| tbl-cap: Filtered regulatory mandates implemented nationally and at the provincial and territorial level during the COVID-19 pandemic in Canada.
+man <- vroom("mandates.csv") |>
+  left_join(mandates, by = "entry_id") |>
+  mutate(
+    start_date = as_date(start_date),
+    action = case_when(entry_id == "MB615" ~ "Eased", .default = action)
+  ) |>
+  tidyr::pivot_wider(
+    id_cols = c(mandate_id, jurisdiction, intervention_category, intervention_type),
+    names_from = action,
+    values_from = start_date
+  ) |>
+  mutate(name = glue("{intervention_category}: {intervention_type}"))
+
+# Table
+man |>
+  select(-mandate_id, -name) |>
+  arrange(jurisdiction, intervention_category, intervention_type) |>
+  knitr::kable(col.names = c("Jurisdiction", "Category", "Type", "New", "Eased"))
+```
+
 ## Temporal exploration
 
-Let us first explore the temporal trends in covid outcomes through time. Let's begin by looking at weekly cumulative outcomes per 100 000 habitants in each health region. 
+Below, we explore the temporal trends in cumulative cases and deaths for each Canadian health region on a weekly basis. Within each region, we normalized cumulative weekly cases and deaths by the population size times 100 000 to obtain an estimate of the cumulative outcomes per 100 000 habitants for each health region. We present a plot for each province and territory, each line representing the temporal trends for each health region. Mandates are overlaid as vertical lines on the line plots. Red lines represent the implementation of new regulatory mandates, while green lines identifies the date when mandates were lifted. 
 
 ### Cases
 
@@ -138,24 +162,8 @@ dat <- covid |>
   arrange(name, region, sub_region_1, date) |>
   select(-pop, value_weekly)
 
-# Manual clean up of mandates
-man <- vroom("mandates.csv") |>
-  # filter(!mandate_id %in% c(26, 40, 43, 52)) |>
-  left_join(mandates, by = "entry_id") |>
-  mutate(
-    start_date = as_date(start_date),
-    action = case_when(entry_id == "MB615" ~ "Eased", .default = action)
-  ) |>
-  tidyr::pivot_wider(
-    id_cols = c(mandate_id, jurisdiction, intervention_category, intervention_type),
-    names_from = action,
-    values_from = start_date
-  ) |>
-  mutate(name = glue("{intervention_category}: {intervention_type}"))
-
-
 # Chart
-x <- dat |>
+p <- dat |>
   filter(name == "cases") |>
   group_by(region) |>
   group_split() |>
@@ -180,7 +188,7 @@ x <- dat |>
         .init = .
       )
   })
-do.call(e_arrange, x)
+do.call(e_arrange, p)
 ```
 
 ### Deaths
