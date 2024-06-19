@@ -148,6 +148,7 @@ Below, we explore the temporal trends in cumulative cases and deaths for each Ca
 
 ```{r}
 #| label: case_timelines
+man <- mutate(man, Eased = case_when(is.na(Eased) ~ as.Date("2030-01-01"), .default = Eased))
 dat <- covid |>
   mutate(
     week = week(date),
