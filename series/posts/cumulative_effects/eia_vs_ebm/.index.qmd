@@ -1,7 +1,7 @@
 ---
 title: "EIA vs EBM"
 author: "David Beauchesne"
-date: "2024-05-02"
+date: "2024-06-15"
 categories: [cumulative effects]
 image: "wordcloud.png"
 draft: true
@@ -34,52 +34,64 @@ Still, both should be part of an overarching plan (Epp 1997)
 
 ```{r}
 #| label: setup
+#| echo: false
 library(dplyr)
 ```
 
-In my latest post, I performed some semantic analysis and exploration of a [literature review centered on cumulative effects assessment](../review_scientific_literature/). In this post, I want to dive deeper in this review and contrast environmental impact assessments and ecosystem-based management, both of which regularly cite the assessment of cumulative effects in their respective process. Here, ecosystem-based management also encompasses processes such as strategic conservation planning and marine spatial planning, which are essentially ecosystem-based management approaches.
+In my latest post, I performed semantic analyses on a [literature review centered on cumulative effects assessment](../review_scientific_literature/). In this post, I want to dive deeper in this review and contrast three different fields of research that regularly cite the assessment of cumulative effects in their respective process: environmental impact assessment, ecosystem-based management and multiple stressors experiments. 
 
-In a nutshell, the assessment of cumulative effects through an environmental impact assessment is usually centered on project-specific appraisal and acceptance unless it is a regional assessment. Cumulative effects viewed through the lense of ecosystem-based management, meanwhile, are more holistic in scope, are usually performed at larger spatial scales and are concerned with the management and monitoring of whole regions. For more information, you can read my blog post that details [what are cumulative effects](../what_are_cumulative_effects/).
+The assessment of cumulative effects through an environmental impact assessment is usually centered on project-specific appraisal and acceptance unless it is a regional assessment. Cumulative effects viewed through the lense of ecosystem-based management, meanwhile, are more holistic in scope, are usually performed at larger spatial scales and are concerned with the management and monitoring of whole regions. This encompasses processes such as strategic conservation planning and marine spatial planning, which are essentially ecosystem-based management approaches. For more information on these two fields, you can read my blog post that details [what are cumulative effects](../what_are_cumulative_effects/).
+
+Not covered in my previous post is a third area that focuses on the cumulative effects of multiple stressors. This field typically explores how various stressors, when combined, impact the environment or organisms. Researchers in this area often conduct controlled experiments involving two or three stressors to observe their effects on ecological processes (*e.g.* growth, mortality) for specific organisms or groups of organisms. These experiments are crucial for understanding non-additive effects, such as antagonistic effects, where stressors counteract each other, and synergistic effects, where stressors amplify each other's impact. Findings from these studies are much more contextual and have limited applicability for large scale environmental management, although researchers in that field may disagree with this statement. 
+
+The three fields of research all shape how managers approach cumulative effects. They borrow concepts and keywords from each field, often expecting the best of all three when discussing these effects. Based on my experience in ecosystem-based cumulative effects assessment, I've noticed two recurring questions that stem from the other fields:
+
+From the multiple stressors field:
+
+- "We know that stressors do not always combine additively. How are you considering non-additive effects in your assessment?"
+
+From the environmental impact assessment field:
+
+- "What is the significance and the uncertainty associated with your assessment?"
+
+Conversely, the other fields are plagued by questions stemming from ecosystem-based management:
+
+To the multiple stressors field:
+
+- "There are many more stressors and organisms in an ecosystem. How can your results be used to predict synergistic effects for all combinations of stressors and organisms in an ecosystem?"
+
+To the environmental impact assessment field:
+
+- "Your assessment covers a single project in a region impacted by numerous other projects and industries on top of climate change. How does your assessment account for these additional effects?"
+
+These are all valid questions that highlight the interconnectedness of these fields. However, no single field can answer all environmental management questions. It's crucial for those emphasizing the importance of cumulative effects to understand the limitations of these research areas, the types of answers they can provide, and which field to consult based on the specific management question. The goal of this post is therefore to begin highlighting the differences between these research fields based on the published literature.
 
 
 # Screening the literature
 
-After programmatically exploring the results of the literature search in [my previous post](../review_scientific_literature/), I manually screened and tagged all the peer-reviewed articles. I was mostly interested in identifying the process each article was interested in (*i.e.* environmental impacts assessment vs ecosystem-based management), the type of ecosystem they worked on (*i.e.* marine, terrestrial or freshwater), and the countries where the work was performed. Through this work, I also removed some articles that made it through the programmatic filtering process done previously but that should have been removed. 
+After programmatically exploring the results of the literature search in [my previous post](../review_scientific_literature/), I manually screened and tagged all the peer-reviewed articles. For this post, I was mostly interested in identifying the process each article was interested in (*i.e.* environmental impacts assessment vs ecosystem-based management vs multiple stressors), the types of ecosystem they worked on (*i.e.* marine, terrestrial or freshwater), and the countries where the work was performed. Through this work, I also removed some articles that made it through the programmatic filtering process done previously but that should have been removed. 
 
-
-
-
-## Articles
+## Keywords
 
 ```{r}
 #| label: data_cleanup
-# Get data
-# lit <- bib2df::bib2df("cea_screening.bib", separate_names = TRUE, merge_lines = TRUE) |>
-lit <- bib2df::bib2df("series/posts/cumulative_effects/eia_vs_ebm/cea_screen.bib", separate_names = TRUE, merge_lines = TRUE) |>
+# Bibliographies
+lit <- bib2df::bib2df("cea_screen.bib", separate_names = TRUE, merge_lines = TRUE) |>
+  # lit <- bib2df::bib2df("series/posts/cumulative_effects/eia_vs_ebm/cea_screen.bib", separate_names = TRUE, merge_lines = TRUE) |>
   mutate(uid = row_number())
-countries <- vroom::vroom("series/posts/cumulative_effects/eia_vs_ebm/cea_countries.csv")
 
-# Extract keywords
+# Countries
+# countries <- vroom::vroom("series/posts/cumulative_effects/eia_vs_ebm/cea_countries.csv")
+countries <- vroom::vroom("cea_countries.csv", delim = ",")
+
+# Keywords
 key <- lit |>
   select(uid, KEYWORDS) |>
   reframe(key = unlist(stringr::str_split(KEYWORDS, ",")), .by = c(uid)) |>
   tidyr::drop_na() |>
   mutate(key = tolower(stringr::str_trim(key, side = "both"))) |>
-  filter(key != "")
-
-
-
-x <- key |>
-  group_by(uid) |>
-  filter(!key %in% c("ebm", "eia", "multiple stressors"))
-
-
-# Check that they all have eia or ebm tag (remove this once completed)
-x <- group_by(key, by = uid) |>
-  summarize(check = "eia" %in% key | "ebm" %in% key)
-
-
-
+  filter(key != "") |>
+  filter(!key %in% c("skimmed", "to read", "read again"))
 
 # Table of keywords
 table(key$key) |>
@@ -87,7 +99,22 @@ table(key$key) |>
   arrange(desc(Freq)) |>
   knitr::kable(col.names = c("Keywords", "Frequency")) |>
   kableExtra::scroll_box(width = "55%", height = "500px")
+
+# # Table of keywords that I specifically used in my research
+# key |>
+#   filter(key %in% c("ebm", "eia", "marine", "freshwater", "terrestrial", "case study", "data", "geospatial", "health", "indigenous", "legislation", "management", "method", "problem", "process", "rea", "review", "risk", "roles", "social", "sea", "sen", "solution")) |>
+#   count(key) |>
+#   arrange(desc(n)) |>
+#   knitr::kable(col.names = c("Keywords", "Frequency")) |>
+#   kableExtra::scroll_box(width = "55%", height = "500px")
 ```
+
+
+
+
+
+<!-- 
+
 
 
 The search and filtering process yielded a total of `r nrow(lit)` peer-reviewed articles. I begin with a classic figure for a literature review, *i.e.* the number of articles through time. The first articles concerned with cumulative effects assessment date back to 1985. Since, we observe a steady increase in the number of articles published, although the last couple of years have seen a dip in the number of articles published concerned with cumulative effects. 
@@ -634,3 +661,5 @@ echarts4r::e_charts() |>
   echarts4r::e_graph_edges(edges, source, target, value, size) |>
   echarts4r::e_tooltip()
 ```
+
+ -->
