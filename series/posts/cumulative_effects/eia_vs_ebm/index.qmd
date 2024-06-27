@@ -120,7 +120,7 @@ table(key$key) |>
 The screening process allowed me to differentiate between the different fields of research. For a total of `r nrow(lit)` published articles, here is the breakdown of the number of articles per research fields.
 
 ```{r}
-#| label:
+#| label: articles
 #| tab-cap: Number of articles published per fields of research
 dat <- filter(key, key %in% c("eia", "ebm", "multiple stressors")) |>
   mutate(key = case_when(key == "multiple stressors" ~ "ms", .default = key)) |>

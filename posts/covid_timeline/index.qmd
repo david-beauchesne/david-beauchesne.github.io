@@ -51,21 +51,77 @@ covid <- dplyr::bind_rows(
 
 # Create summary table
 dat <- hr |>
-  dplyr::group_by(region) |>
-  dplyr::summarise(
-    region_num = dplyr::n(),
+  group_by(region) |>
+  summarise(
+    region_num = n(),
     population = sum(pop, na.rm = TRUE)
   )
 
 covid |>
-  dplyr::group_by(name, region) |>
-  dplyr::summarize(value_daily = sum(value_daily)) |>
+  group_by(name, region) |>
+  summarize(value_daily = sum(value_daily)) |>
   tidyr::pivot_wider(names_from = name, values_from = value_daily) |>
-  dplyr::left_join(dat, by = "region") |>
-  dplyr::select(region, region_num, population, cases, deaths) |>
+  left_join(dat, by = "region") |>
+  select(region, region_num, population, cases, deaths) |>
   knitr::kable(
     col.names = c("Province", "Health regions", "Population", "Cases", "Deaths"),
     row.names = FALSE,
+  )
+```
+
+```{r}
+#| label: geocovid
+#| fig-cap: Map of health regions with relative population sizes and relative COVID-19 outcomes.
+tmp <- left_join(
+  hr,
+  covid |>
+    group_by(name, sub_region_1) |>
+    summarize(outcomes = sum(value_daily)) |>
+    tidyr::pivot_wider(names_from = name, values_from = outcomes),
+  by = c("hruid" = "sub_region_1")
+) |>
+  select(name = name_canonical, pop, cases, deaths) |>
+  mutate(
+    cases_per_100k = (cases / pop) * 100000,
+    deaths_per_100k = (deaths / pop) * 100000
+  ) |>
+  rename(
+    Population = pop,
+    `Number of cases` = cases,
+    `Number of deaths` = deaths,
+    `Number of cases per 100 000 habitants` = cases_per_100k,
+    `Number of deaths per 100 000 habitants` = deaths_per_100k
+  )
+
+
+json <- sf::st_read("https://github.com/ccodwg/CovidTimelineCanada/raw/main/geo/hr.geojson", quiet = TRUE) |>
+  rename(name = name_canonical) |>
+  geojsonio::geojson_list()
+
+
+tmp |>
+  lapply(function(x) {
+    if (is.numeric(x)) {
+      x / max(x)
+    } else {
+      x
+    }
+  }) |>
+  as.data.frame() |>
+  tidyr::pivot_longer(-name, names_to = "Outcomes", values_to = "value") |>
+  group_by(Outcomes) |>
+  e_charts(name, timeline = TRUE) |>
+  e_map_register("Canada", json) |>
+  e_map(value, map = "Canada", roam = TRUE) |>
+  e_visual_map(value, color = viridis::magma(100)) |>
+  echarts4r::e_timeline_serie(
+    title = list(
+      list(text = "Relative number of COVID-19 cases"),
+      list(text = "Relative number of COVID-19 cases per 100 000 habitants"),
+      list(text = "Relative number of COVID-19 deaths"),
+      list(text = "Relative number of COVID-19 deaths per 100 000 habitants"),
+      list(text = "Relative population size")
+    )
   )
 ```
 
