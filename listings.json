@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
       "/series/posts/cumulative_effects/eia_vs_ebm/index.html",
       "/posts/covid_timeline/index.html",
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/index.html",
     "items": [
       "/series/posts/cumulative_effects/eia_vs_ebm/index.html",
       "/posts/covid_timeline/index.html",
