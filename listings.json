@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/series/main/cumulative_effects/index.html",
+    "items": [
+      "/series/posts/cumulative_effects/eia_vs_ebm/index.html",
+      "/series/posts/cumulative_effects/review_scientific_literature/index.html",
+      "/series/posts/cumulative_effects/what_are_cumulative_effects/index.html",
+      "/series/posts/cumulative_effects/welcome/index.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/series/posts/cumulative_effects/eia_vs_ebm/index.html",
@@ -9,15 +18,6 @@
       "/series/posts/cumulative_effects/welcome/index.html",
       "/series/main/cumulative_effects/index.html",
       "/posts/welcome/index.html"
-    ]
-  },
-  {
-    "listing": "/series/main/cumulative_effects/index.html",
-    "items": [
-      "/series/posts/cumulative_effects/eia_vs_ebm/index.html",
-      "/series/posts/cumulative_effects/review_scientific_literature/index.html",
-      "/series/posts/cumulative_effects/what_are_cumulative_effects/index.html",
-      "/series/posts/cumulative_effects/welcome/index.html"
     ]
   },
   {
