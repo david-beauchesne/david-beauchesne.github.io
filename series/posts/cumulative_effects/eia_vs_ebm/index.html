@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>EIA vs EBM – David Beauchesne</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -73,10 +76,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-afce86f435cb6832de528ed0528b154e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-9eb2dcf4296333510909099cc84966dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -329,7 +332,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bibliographies</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bibliographies</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lit <span class="ot">&lt;-</span> bib2df<span class="sc">::</span><span class="fu">bib2df</span>(<span class="st">"cea_screen.bib"</span>, <span class="at">separate_names =</span> <span class="cn">TRUE</span>, <span class="at">merge_lines =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># lit &lt;- bib2df::bib2df("series/posts/cumulative_effects/eia_vs_ebm/cea_screen.bib", separate_names = TRUE, merge_lines = TRUE) |&gt;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -356,11 +359,11 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">|&gt;</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Freq)) <span class="sc">|&gt;</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Keywords"</span>, <span class="st">"Frequency"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:55%; ">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Keywords</th>
@@ -4454,13 +4457,13 @@ Still, both should be part of an overarching plan (Epp 1997)
 </div>
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Table of keywords that I specifically used in my research</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # Table of keywords that I specifically used in my research</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># key |&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   filter(key %in% c("ebm", "eia", "marine", "freshwater", "terrestrial", "case study", "data", "geospatial", "health", "indigenous", "legislation", "management", "method", "problem", "process", "rea", "review", "risk", "roles", "social", "sea", "sen", "solution")) |&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   count(key) |&gt;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   arrange(desc(n)) |&gt;</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   knitr::kable(col.names = c("Keywords", "Frequency")) |&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   kableExtra::scroll_box(width = "55%", height = "500px")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   kableExtra::scroll_box(width = "55%", height = "500px")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -4472,7 +4475,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <div class="cell" data-tab-cap="Number of articles published per fields of research">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">filter</span>(key, key <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"eia"</span>, <span class="st">"ebm"</span>, <span class="st">"multiple stressors"</span>)) <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">filter</span>(key, key <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"eia"</span>, <span class="st">"ebm"</span>, <span class="st">"multiple stressors"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">key =</span> <span class="fu">case_when</span>(key <span class="sc">==</span> <span class="st">"multiple stressors"</span> <span class="sc">~</span> <span class="st">"ms"</span>, <span class="at">.default =</span> key)) <span class="sc">|&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(uid) <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">key =</span> <span class="fu">paste</span>(key, <span class="at">collapse =</span> <span class="st">" &amp; "</span>)) <span class="sc">|&gt;</span></span>
@@ -4503,7 +4506,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">dataLabels =</span> <span class="fu">list</span>(<span class="at">style =</span> <span class="fu">list</span>(<span class="at">fontSize =</span> <span class="st">"20px"</span>)),</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Venn Diagram"</span>,</span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> dat</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="highchart html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-69fec1fdbacd64a5195a" style="width:100%;height:464px;"></div>
@@ -4517,7 +4520,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  lit[, <span class="fu">c</span>(<span class="st">"uid"</span>, <span class="st">"year"</span>)],</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(key, key <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"eia"</span>, <span class="st">"ebm"</span>, <span class="st">"multiple stressors"</span>)),</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">"uid"</span></span>
@@ -4553,7 +4556,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_x_axis</span>(<span class="at">min =</span> <span class="dv">1985</span>, <span class="at">max =</span> <span class="dv">2024</span>, <span class="at">formatter =</span> echarts4r<span class="sc">::</span><span class="fu">e_axis_formatter</span>(<span class="at">digits =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>(<span class="at">trigger =</span> <span class="st">"axis"</span>, <span class="at">order =</span> <span class="st">"valueDesc"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_animation</span>(<span class="at">duration =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_animation</span>(<span class="at">duration =</span> <span class="dv">10000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-773d2122ec7f04bc7822" style="width:100%;height:500px;"></div>
@@ -4568,7 +4571,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ecosystem <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ecosystem <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  key <span class="sc">|&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(key <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"eia"</span>, <span class="st">"ebm"</span>, <span class="st">"multiple stressors"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="at">field =</span> key),</span>
@@ -4604,7 +4607,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>(<span class="at">trigger =</span> <span class="st">"axis"</span>, <span class="at">order =</span> <span class="st">"valueDesc"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_y_axis</span>(</span>
 <span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">formatter =</span> echarts4r<span class="sc">::</span><span class="fu">e_axis_formatter</span>(<span class="st">"percent"</span>)</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4082e2b36d7a704cd80f" style="width:100%;height:500px;"></div>
@@ -4618,7 +4621,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cns0 <span class="ot">&lt;-</span> countrycode<span class="sc">::</span>codelist<span class="sc">$</span>country.name.en</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cns0 <span class="ot">&lt;-</span> countrycode<span class="sc">::</span>codelist<span class="sc">$</span>country.name.en</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cns <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">country =</span> cns0) <span class="sc">|&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    key <span class="sc">|&gt;</span></span>
@@ -4644,7 +4647,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>dat <span class="sc">|&gt;</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_charts</span>(country) <span class="sc">|&gt;</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_map</span>(value, <span class="at">roam =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_visual_map</span>(value, <span class="at">color =</span> viridis<span class="sc">::</span><span class="fu">magma</span>(<span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_visual_map</span>(value, <span class="at">color =</span> viridis<span class="sc">::</span><span class="fu">magma</span>(<span class="dv">100</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9d3ee8b83c890169f848" style="width:100%;height:500px;"></div>
@@ -4653,7 +4656,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 </div>
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure per country per field of research</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure per country per field of research</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>cns <span class="sc">|&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">c</span>(<span class="st">"eia"</span>, <span class="st">"ebm"</span>, <span class="st">"ms"</span>), sum) <span class="sc">|&gt;</span></span>
@@ -4676,7 +4679,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Ecosystem-Based Management"</span>, <span class="at">subtext =</span> <span class="st">"Percent number of articles published"</span>),</span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Multiple Stressors"</span>, <span class="at">subtext =</span> <span class="st">"Percent number of articles published"</span>)</span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-bf6f9ccc570db0925468" style="width:100%;height:500px;"></div>
@@ -4685,7 +4688,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 </div>
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure per country per ecosystem</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure per country per ecosystem</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>cns <span class="sc">|&gt;</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_at</span>(<span class="fu">c</span>(<span class="st">"marine"</span>, <span class="st">"continental"</span>), sum) <span class="sc">|&gt;</span></span>
@@ -4703,7 +4706,7 @@ Still, both should be part of an overarching plan (Epp 1997)
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Marine ecosystems"</span>, <span class="at">subtext =</span> <span class="st">"Percent number of articles published"</span>),</span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Continental ecosystems"</span>, <span class="at">subtext =</span> <span class="st">"Percent number of articles published"</span>)</span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-713774b0e99183f267df" style="width:100%;height:500px;"></div>
@@ -4769,13 +4772,14 @@ Still, both should be part of an overarching plan (Epp 1997)
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

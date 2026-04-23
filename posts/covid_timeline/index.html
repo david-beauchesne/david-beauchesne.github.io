@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>An exploration of COVID-19 outcomes throuth time in Canada – David Beauchesne</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -93,10 +96,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-afce86f435cb6832de528ed0528b154e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9eb2dcf4296333510909099cc84966dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -259,11 +262,11 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vroom)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(echarts4r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(echarts4r)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Part of my postdoctoral work at the University of Toronto has put me in touch with environmental health scientists during the pandemic, one of them being an old friend, <a href="https://www.torontomu.ca/occupational-public-health/about/people/faculty/rob-moriarity/">Robert Moriarity</a>. We met during our respective master’s at Concordia University in Montreal and always thought that combining our respective expertises would be highly relevant. Rob is now an assistant professor at the School of Occupational and Public Health at the Toronto Metropolitan University.</p>
@@ -273,12 +276,12 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="covid-19-data">COVID-19 data</h2>
 <section id="outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="outcomes">Outcomes</h3>
-<p>The Timeline of COVID-19 in Canada initiative<span class="citation" data-cites="berry2021"><sup><a href="#ref-berry2021" role="doc-biblioref">2</a></sup></span> provides daily COVID-19 outcome metrics (e.g.&nbsp;deaths, cases, hospitalizations, and tests completed) at the national, provincial/territorial, and health region scales. Here, we used the finer scale spatial data at the health region-level for which daily number of cases and deaths are available for 99 health regions across the country. We limited the temporal window of our exploration to the onset of the pandemic (2020-01-01) to the onset of the Omicron variant (2022-03-11), as it coincides with certain Canadian provinces phasing out reporting at the level of health regions and with the advent of rapid testing, which decreased case reporting throughout the country.</p>
+<p>The Timeline of COVID-19 in Canada initiative<span class="citation" data-cites="berry2021"><sup><a href="#ref-berry2021" role="doc-biblioref">1</a></sup></span> provides daily COVID-19 outcome metrics (e.g.&nbsp;deaths, cases, hospitalizations, and tests completed) at the national, provincial/territorial, and health region scales. Here, we used the finer scale spatial data at the health region-level for which daily number of cases and deaths are available for 99 health regions across the country. We limited the temporal window of our exploration to the onset of the pandemic (2020-01-01) to the onset of the Omicron variant (2022-03-11), as it coincides with certain Canadian provinces phasing out reporting at the level of health regions and with the advent of rapid testing, which decreased case reporting throughout the country.</p>
 <p>Let us begin by downloading and filtering the data from the <a href="https://github.com/ccodwg/CovidTimelineCanada/">GitHub repository</a> where they are stored.</p>
 <div class="cell" data-tbl-cap="Summary table of the number of health regions, the population size and the number of COVID-19 outcomes (*i.e.* cases and deaths) in Canadian provinces and territories between 2020-01-01 and 2022-03-11.">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>hr <span class="ot">&lt;-</span> vroom<span class="sc">::</span><span class="fu">vroom</span>(<span class="st">"https://github.com/ccodwg/CovidTimelineCanada/raw/main/geo/hr.csv"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/ccodwg/CovidTimelineCanada/main/data/hr/"</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>covid <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(</span>
@@ -305,7 +308,7 @@ div.csl-indent {
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Province"</span>, <span class="st">"Health regions"</span>, <span class="st">"Population"</span>, <span class="st">"Cases"</span>, <span class="st">"Deaths"</span>),</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -418,7 +421,7 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  hr,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  covid <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(name, sub_region_1) <span class="sc">|&gt;</span></span>
@@ -468,7 +471,7 @@ div.csl-indent {
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Relative number of COVID-19 deaths per 100 000 habitants"</span>),</span>
 <span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">text =</span> <span class="st">"Relative population size"</span>)</span>
 <span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-88ececfee14d669afcdf" style="width:100%;height:500px;"></div>
@@ -479,11 +482,11 @@ div.csl-indent {
 </section>
 <section id="mandates" class="level3">
 <h3 class="anchored" data-anchor-id="mandates">Mandates</h3>
-<p>Along with cumulative outcomes, we wish to look at the timing of certain types of regulatory interventions that were instated during the pandemic to curb the rates of outcomes (<em>e.g.</em> lockdowns and mask mandates). We used data from the Canadian Institute for Health Information detailing the <a href="https://www.cihi.ca/en/canadian-covid-19-intervention-timeline">timeline of federal, provincial and territorial government interventions during the COVID-19 pandemic</a><span class="citation" data-cites="cihi2022"><sup><a href="#ref-cihi2022" role="doc-biblioref">1</a></sup></span>.</p>
+<p>Along with cumulative outcomes, we wish to look at the timing of certain types of regulatory interventions that were instated during the pandemic to curb the rates of outcomes (<em>e.g.</em> lockdowns and mask mandates). We used data from the Canadian Institute for Health Information detailing the <a href="https://www.cihi.ca/en/canadian-covid-19-intervention-timeline">timeline of federal, provincial and territorial government interventions during the COVID-19 pandemic</a><span class="citation" data-cites="cihi2022"><sup><a href="#ref-cihi2022" role="doc-biblioref">2</a></sup></span>.</p>
 <div class="cell" data-tbl-cap="Summary of the number of categories of interventions implemented by the Canadian and provincial/territorial governments throughout the pandemic.">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>curl<span class="sc">::</span><span class="fu">curl_download</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>curl<span class="sc">::</span><span class="fu">curl_download</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://www.cihi.ca/sites/default/files/document/aoda-covid-19-intervention-timeline-in-canada-en.xlsx"</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"mandates.xlsx"</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -517,7 +520,7 @@ div.csl-indent {
 <span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> jurisdiction, <span class="at">values_from =</span> number) <span class="sc">|&gt;</span></span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Intervention category</span><span class="st">`</span> <span class="ot">=</span> intervention_category) <span class="sc">|&gt;</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -737,7 +740,7 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># label: mandates-filtering</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># label: mandates-filtering</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Filtered regulatory mandates implemented nationally and at the provincial and territorial level during the COVID-19 pandemic in Canada.</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>man <span class="ot">&lt;-</span> <span class="fu">vroom</span>(<span class="st">"mandates.csv"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(mandates, <span class="at">by =</span> <span class="st">"entry_id"</span>) <span class="sc">|&gt;</span></span>
@@ -756,7 +759,7 @@ div.csl-indent {
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>man <span class="sc">|&gt;</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>mandate_id, <span class="sc">-</span>name) <span class="sc">|&gt;</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(jurisdiction, intervention_category, intervention_type) <span class="sc">|&gt;</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Jurisdiction"</span>, <span class="st">"Category"</span>, <span class="st">"Type"</span>, <span class="st">"New"</span>, <span class="st">"Eased"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Jurisdiction"</span>, <span class="st">"Category"</span>, <span class="st">"Type"</span>, <span class="st">"New"</span>, <span class="st">"Eased"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -1274,7 +1277,7 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>man <span class="ot">&lt;-</span> <span class="fu">mutate</span>(man, <span class="at">Eased =</span> <span class="fu">case_when</span>(<span class="fu">is.na</span>(Eased) <span class="sc">~</span> <span class="fu">as.Date</span>(<span class="st">"2030-01-01"</span>), <span class="at">.default =</span> Eased))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>man <span class="ot">&lt;-</span> <span class="fu">mutate</span>(man, <span class="at">Eased =</span> <span class="fu">case_when</span>(<span class="fu">is.na</span>(Eased) <span class="sc">~</span> <span class="fu">as.Date</span>(<span class="st">"2030-01-01"</span>), <span class="at">.default =</span> Eased))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> covid <span class="sc">|&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">week =</span> <span class="fu">week</span>(date),</span>
@@ -1315,7 +1318,7 @@ div.csl-indent {
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        <span class="at">.init =</span> .</span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="fu">do.call</span>(e_arrange, p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="fu">do.call</span>(e_arrange, p)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="row">
@@ -1404,7 +1407,7 @@ div.csl-indent {
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chart</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> dat <span class="sc">|&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"deaths"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
@@ -1430,7 +1433,7 @@ div.csl-indent {
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">.init =</span> .</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>      )</span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="fu">do.call</span>(e_arrange, x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="fu">do.call</span>(e_arrange, x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="row">
@@ -1518,10 +1521,10 @@ div.csl-indent {
 <h4 class="anchored" data-anchor-id="references">References</h4>
 <div id="refs-main" class="references csl-bib-body" data-entry-spacing="1" data-line-spacing="2" role="list">
 <div id="ref-cihi2022" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Health Information, C. I. for. <em>Canadian <span>Data Set</span> of <span>COVID-19 Interventions</span> - <span>Data Tables</span>.</em> (2022).</div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Health Information, C. I. for. <em>Canadian <span>Data Set</span> of <span>COVID-19 Interventions</span> - <span>Data Tables</span>.</em> (2022).</div>
 </div>
 <div id="ref-berry2021" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Berry, I., O’Neill, M., Sturrock, S. L., Wright, J. E., Acharya, K., Brankston, G., Harish, V., Kornas, K., Maani, N., Naganathan, T., Obress, L., Rossi, T., Simmons, A. E., Camp, M. V., Xie, X., Tuite, A. R., Greer, A. L., Fisman, D. N. &amp; Soucy, J.-P. R. <a href="https://doi.org/10.1038/s41597-021-00955-2">A sub-national real-time epidemiological and vaccination database for the <span>COVID-19</span> pandemic in <span>Canada</span></a>. <em>Scientific Data</em> <strong>8</strong>, (2021).</div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Berry, I., O’Neill, M., Sturrock, S. L., Wright, J. E., Acharya, K., Brankston, G., Harish, V., Kornas, K., Maani, N., Naganathan, T., Obress, L., Rossi, T., Simmons, A. E., Camp, M. V., Xie, X., Tuite, A. R., Greer, A. L., Fisman, D. N. &amp; Soucy, J.-P. R. <a href="https://doi.org/10.1038/s41597-021-00955-2">A sub-national real-time epidemiological and vaccination database for the <span>COVID-19</span> pandemic in <span>Canada</span></a>. <em>Scientific Data</em> <strong>8</strong>, (2021).</div>
 </div>
 </div>
 
@@ -1582,13 +1585,14 @@ div.csl-indent {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

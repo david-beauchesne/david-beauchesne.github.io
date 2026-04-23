@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>A review of the scientific literature – David Beauchesne</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -73,10 +76,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-afce86f435cb6832de528ed0528b154e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-9eb2dcf4296333510909099cc84966dc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -259,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Search queries used to query the Web of Science database
+<span class="screen-reader-only">Note</span>Search queries used to query the Web of Science database
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -272,12 +275,12 @@ Search queries used to query the Web of Science database
 </div>
 <p>I further constrained the search by excluding any article category that did not touch on environmental management or ecology in general.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Expand to see list of excluded Web of Science categories
+<span class="screen-reader-only">Note</span>Expand to see list of excluded Web of Science categories
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -375,7 +378,7 @@ Expand to see list of excluded Web of Science categories
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lit <span class="ot">&lt;-</span> bib2df<span class="sc">::</span><span class="fu">bib2df</span>(<span class="st">"cea_search.bib"</span>, <span class="at">separate_names =</span> <span class="cn">TRUE</span>, <span class="at">merge_lines =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">uid =</span> dplyr<span class="sc">::</span><span class="fu">row_number</span>())</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -408,7 +411,7 @@ Expand to see list of excluded Web of Science categories
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Update literature list</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>lit <span class="ot">&lt;-</span> lit[<span class="sc">-</span>uid, ]</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># bib2df::df2bib(lit, file = "cea_search_filtered.bib")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># bib2df::df2bib(lit, file = "cea_search_filtered.bib")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -421,11 +424,11 @@ Expand to see list of excluded Web of Science categories
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(lit<span class="sc">$</span>YEAR) <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(lit<span class="sc">$</span>YEAR) <span class="sc">|&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">|&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_charts</span>(Var1) <span class="sc">|&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_bar</span>(Freq, <span class="at">name =</span> <span class="st">"Articles"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_title</span>(<span class="st">"Number of articles per year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_title</span>(<span class="st">"Number of articles per year"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-ceafreq" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -446,7 +449,7 @@ Figure&nbsp;1: Number of articles on cumulative effects assessment published eac
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract keywords</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract keywords</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>key <span class="ot">&lt;-</span> lit <span class="sc">|&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(uid, KEYWORDS, YEAR) <span class="sc">|&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">reframe</span>(<span class="at">key =</span> <span class="fu">unlist</span>(stringr<span class="sc">::</span><span class="fu">str_split</span>(KEYWORDS, <span class="st">";"</span>)), <span class="at">.by =</span> <span class="fu">c</span>(YEAR, uid)) <span class="sc">|&gt;</span></span>
@@ -459,7 +462,7 @@ Figure&nbsp;1: Number of articles on cumulative effects assessment published eac
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">|&gt;</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(dplyr<span class="sc">::</span><span class="fu">desc</span>(Freq)) <span class="sc">|&gt;</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Keywords"</span>, <span class="st">"Frequency"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="tbl-ceakey" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -469,7 +472,7 @@ Table&nbsp;1: Frequency of keywords used literature search on cumulative effects
 <div aria-describedby="tbl-ceakey-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:55%; ">
-<table class="do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Keywords</th>
@@ -4890,7 +4893,7 @@ Table&nbsp;1: Frequency of keywords used literature search on cumulative effects
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Queried terms to remove</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Queried terms to remove</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>rem <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"environmental"</span>, <span class="st">"cumulative"</span>, <span class="st">"effects"</span>, <span class="st">"effect"</span>, <span class="st">"impacts"</span>,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"impact"</span>, <span class="st">"risks"</span>, <span class="st">"risk"</span>, <span class="st">"assessments"</span>, <span class="st">"assessment"</span>, <span class="st">"na"</span>,</span>
@@ -4920,7 +4923,7 @@ Table&nbsp;1: Frequency of keywords used literature search on cumulative effects
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Words"</span>, <span class="st">"Number of articles"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_paper</span>() <span class="sc">|&gt;</span></span>
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">position =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="tbl-words" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -4930,7 +4933,7 @@ Table&nbsp;2: Frequency of words used in the titles and abstracts of the literat
 <div aria-describedby="tbl-words-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:55%; ">
-<table class="lightable-paper table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<table class="lightable-paper table cell caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Words</th>
@@ -31449,11 +31452,11 @@ Table&nbsp;2: Frequency of words used in the titles and abstracts of the literat
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>words <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>words <span class="sc">|&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">60</span>) <span class="sc">|&gt;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_color_range</span>(n, color, <span class="at">colors =</span> viridis<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_charts</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_cloud</span>(word, n, color, <span class="at">shape =</span> <span class="st">"circle"</span>, <span class="at">sizeRange =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">38</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_cloud</span>(word, n, color, <span class="at">shape =</span> <span class="st">"circle"</span>, <span class="at">sizeRange =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">38</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-wordcloud" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -31471,7 +31474,7 @@ Figure&nbsp;2: Wordcloud of terms most often used in titles and abstracts of man
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>word_time <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">expand_grid</span>(<span class="at">word =</span> <span class="fu">unique</span>(words_year<span class="sc">$</span>word), <span class="at">year =</span> <span class="fu">min</span>(words_year<span class="sc">$</span>year)<span class="sc">:</span><span class="fu">max</span>(words_year<span class="sc">$</span>year)) <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>word_time <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">expand_grid</span>(<span class="at">word =</span> <span class="fu">unique</span>(words_year<span class="sc">$</span>word), <span class="at">year =</span> <span class="fu">min</span>(words_year<span class="sc">$</span>year)<span class="sc">:</span><span class="fu">max</span>(words_year<span class="sc">$</span>year)) <span class="sc">|&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(words_year, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"word"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">n =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(<span class="fu">is.na</span>(n) <span class="sc">~</span> <span class="dv">0</span>, <span class="at">.default =</span> n)) <span class="sc">|&gt;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(word) <span class="sc">|&gt;</span></span>
@@ -31496,7 +31499,7 @@ Figure&nbsp;2: Wordcloud of terms most often used in titles and abstracts of man
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_x_axis</span>(<span class="at">min =</span> <span class="dv">1985</span>, <span class="at">max =</span> <span class="dv">2024</span>, <span class="at">formatter =</span> echarts4r<span class="sc">::</span><span class="fu">e_axis_formatter</span>(<span class="at">digits =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>(<span class="at">trigger =</span> <span class="st">"axis"</span>, <span class="at">order =</span> <span class="st">"valueDesc"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_animation</span>(<span class="at">duration =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_animation</span>(<span class="at">duration =</span> <span class="dv">10000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-wdtime" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -31514,7 +31517,7 @@ Figure&nbsp;3: Number of articles using specific words through time.
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> lit <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>words <span class="ot">&lt;-</span> lit <span class="sc">|&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">txt =</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{TITLE}; {ABSTRACT}"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(uid, txt) <span class="sc">|&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, txt) <span class="sc">|&gt;</span></span>
@@ -31569,7 +31572,7 @@ Figure&nbsp;3: Number of articles using specific words through time.
 <span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_nodes</span>(nodes, name, value, size, <span class="at">xpos =</span> x, <span class="at">ypos =</span> y) <span class="sc">|&gt;</span></span>
 <span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_edges</span>(edges, source, target, value, size) <span class="sc">|&gt;</span></span>
-<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-wordco" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -31590,7 +31593,7 @@ Figure&nbsp;4: Graph of the relationships between the most frequent words in the
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to generate n-gram tokenization</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to generate n-gram tokenization</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ngram <span class="ot">&lt;-</span> <span class="cf">function</span>(txt, n) {</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  rem <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word, <span class="st">"na"</span>, <span class="st">"environmental"</span>, <span class="st">"cumulative"</span>,</span>
@@ -31627,7 +31630,7 @@ Figure&nbsp;4: Graph of the relationships between the most frequent words in the
 <span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Words"</span>, <span class="st">"Number of articles"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_paper</span>() <span class="sc">|&gt;</span></span>
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">position =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="tbl-bigram" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -31637,7 +31640,7 @@ Table&nbsp;3: Frequency of pairs of words used in the titles and abstracts of th
 <div aria-describedby="tbl-bigram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:55%; ">
-<table class="lightable-paper table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<table class="lightable-paper table cell caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Words</th>
@@ -87405,11 +87408,11 @@ Table&nbsp;3: Frequency of pairs of words used in the titles and abstracts of th
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>words <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>words <span class="sc">|&gt;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">7</span>) <span class="sc">|&gt;</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_color_range</span>(n, color, <span class="at">colors =</span> viridis<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_charts</span>() <span class="sc">|&gt;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_cloud</span>(word, n, color, <span class="at">shape =</span> <span class="st">"circle"</span>, <span class="at">sizeRange =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_cloud</span>(word, n, color, <span class="at">shape =</span> <span class="st">"circle"</span>, <span class="at">sizeRange =</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">30</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-wordcloud2" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -87427,7 +87430,7 @@ Figure&nbsp;5: Wordcloud of pairs of words most often used in titles and abstrac
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>word_time <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">expand_grid</span>(<span class="at">word =</span> <span class="fu">unique</span>(bigram<span class="sc">$</span>word), <span class="at">year =</span> <span class="fu">min</span>(bigram<span class="sc">$</span>year)<span class="sc">:</span><span class="fu">max</span>(bigram<span class="sc">$</span>year)) <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>word_time <span class="ot">&lt;-</span> tidyr<span class="sc">::</span><span class="fu">expand_grid</span>(<span class="at">word =</span> <span class="fu">unique</span>(bigram<span class="sc">$</span>word), <span class="at">year =</span> <span class="fu">min</span>(bigram<span class="sc">$</span>year)<span class="sc">:</span><span class="fu">max</span>(bigram<span class="sc">$</span>year)) <span class="sc">|&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(bigram, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"word"</span>, <span class="st">"year"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">n =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(<span class="fu">is.na</span>(n) <span class="sc">~</span> <span class="dv">0</span>, <span class="at">.default =</span> n)) <span class="sc">|&gt;</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(word) <span class="sc">|&gt;</span></span>
@@ -87452,7 +87455,7 @@ Figure&nbsp;5: Wordcloud of pairs of words most often used in titles and abstrac
 <span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_x_axis</span>(<span class="at">min =</span> <span class="dv">1985</span>, <span class="at">max =</span> <span class="dv">2024</span>, <span class="at">formatter =</span> echarts4r<span class="sc">::</span><span class="fu">e_axis_formatter</span>(<span class="at">digits =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>(<span class="at">trigger =</span> <span class="st">"axis"</span>, <span class="at">order =</span> <span class="st">"valueDesc"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_animation</span>(<span class="at">duration =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_animation</span>(<span class="at">duration =</span> <span class="dv">10000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-wdtime2" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -87470,7 +87473,7 @@ Figure&nbsp;6: Number of articles using specific pairs of words through time.
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rem <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rem <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word, <span class="st">"na"</span>, <span class="st">"environmental"</span>, <span class="st">"cumulative"</span>,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"effects"</span>, <span class="st">"effect"</span>, <span class="st">"impacts"</span>, <span class="st">"impact"</span>, <span class="st">"elsevier"</span>,</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"risks"</span>, <span class="st">"risk"</span>, <span class="st">"assessments"</span>, <span class="st">"assessment"</span>, <span class="st">"reserved"</span></span>
@@ -87531,7 +87534,7 @@ Figure&nbsp;6: Number of articles using specific pairs of words through time.
 <span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_nodes</span>(nodes, name, value, size, <span class="at">xpos =</span> x, <span class="at">ypos =</span> y) <span class="sc">|&gt;</span></span>
 <span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_edges</span>(edges, source, target, value, size) <span class="sc">|&gt;</span></span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-bigramco" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -87552,7 +87555,7 @@ Figure&nbsp;7: Graph of the relationships between the most frequent pairs of wor
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ngram <span class="ot">&lt;-</span> <span class="cf">function</span>(txt, n) {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ngram <span class="ot">&lt;-</span> <span class="cf">function</span>(txt, n) {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  rem <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    tidytext<span class="sc">::</span>stop_words<span class="sc">$</span>word,</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"na"</span>, <span class="st">"reserved"</span>, <span class="st">"elsevier"</span> <span class="co"># ,</span></span>
@@ -87663,7 +87666,7 @@ Figure&nbsp;7: Graph of the relationships between the most frequent pairs of wor
 <span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_nodes</span>(nodes, name, value, size, <span class="at">xpos =</span> x, <span class="at">ypos =</span> y) <span class="sc">|&gt;</span></span>
 <span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_edges</span>(edges, source, target, value, size) <span class="sc">|&gt;</span></span>
-<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-expressions" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -87685,7 +87688,7 @@ Figure&nbsp;8: Graph of the relationships between the most frequent expressions 
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>authors <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(lit<span class="sc">$</span>AUTHOR, <span class="at">.id =</span> <span class="st">"uid"</span>) <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>authors <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(lit<span class="sc">$</span>AUTHOR, <span class="at">.id =</span> <span class="st">"uid"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(uid, first_name, last_name) <span class="sc">|&gt;</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>() <span class="sc">|&gt;</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
@@ -87704,7 +87707,7 @@ Figure&nbsp;8: Graph of the relationships between the most frequent expressions 
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Authors"</span>, <span class="st">"Frequency"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_paper</span>() <span class="sc">|&gt;</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">position =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"55%"</span>, <span class="at">height =</span> <span class="st">"500px"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="tbl-ceaaut" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -87714,7 +87717,7 @@ Table&nbsp;4: Number of articles for each author.
 <div aria-describedby="tbl-ceaaut-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:55%; ">
-<table class="lightable-paper table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<table class="lightable-paper table cell caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Authors</th>
@@ -92766,7 +92769,7 @@ Table&nbsp;4: Number of articles for each author.
 <div class="cell">
 <details class="code-fold">
 <summary><i><b>Code</b></i></summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pair_cor <span class="ot">&lt;-</span> authors <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pair_cor <span class="ot">&lt;-</span> authors <span class="sc">|&gt;</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(count <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  widyr<span class="sc">::</span><span class="fu">pairwise_cor</span>(name, uid, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">upper =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(correlation <span class="sc">&gt;</span> <span class="fl">0.2</span>)</span>
@@ -92804,7 +92807,7 @@ Table&nbsp;4: Number of articles for each author.
 <span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_nodes</span>(nodes, name, value, size, <span class="at">xpos =</span> x, <span class="at">ypos =</span> y) <span class="sc">|&gt;</span></span>
 <span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_graph_edges</span>(edges, source, target, value, size) <span class="sc">|&gt;</span></span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>  echarts4r<span class="sc">::</span><span class="fu">e_tooltip</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="fig-authors" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -92875,13 +92878,14 @@ Figure&nbsp;9: Network of interactions between authors
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
